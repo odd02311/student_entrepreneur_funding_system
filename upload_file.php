@@ -1,6 +1,5 @@
 <?php
 
-$allowedExts = array("gif", "jpeg", "jpg", "png");
 $temp = explode(".", $_FILES["file"]["name"]);
 echo $_FILES["file"]["size"];
 
