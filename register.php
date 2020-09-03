@@ -80,4 +80,15 @@
 		exit();
 	}
 
+	//Create INSERT query
+	$qry = "INSERT INTO accounts(email, username, passcode) VALUES('$email','$username','".md5($_POST['password_register'])."')";
+	$result = @mysql_query($qry);
+	
+	//Check whether the query was successful or not
+	if($result) {
+		header("location: login.php?email_login=".$email."&password_login=".$password);
+		exit();
+	}else {
+		die("Query failed");
+	}
 ?>
