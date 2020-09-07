@@ -55,14 +55,14 @@
 		$errflag = true;
 	}
 	
-	//Check for duplicate email address
-	if($email != '') {
-		$qry = "SELECT * FROM members WHERE email='$email'";
+	//Check for duplicate username address
+	if($username != '') {
+		$qry = "SELECT * FROM accounts WHERE username='$username'";
 
 		$result = mysql_query($qry);
 		if($result) {
 			if(mysql_num_rows($result) > 0) {
-				$errmsg_arr[] = 'Email already in use';
+				$errmsg_arr[] = 'username is already in use';
 				$errflag = true;
 			}
 			@mysql_free_result($result);
@@ -81,12 +81,12 @@
 	}
 
 	//Create INSERT query
-	$qry = "INSERT INTO accounts(email, username, passcode) VALUES('$email','$username','".md5($_POST['password_register'])."')";
+	$qry = "INSERT INTO accounts(username, password) VALUES('$username','$username','".md5($_POST['password_register'])."')";
 	$result = @mysql_query($qry);
 	
 	//Check whether the query was successful or not
 	if($result) {
-		header("location: login.php?email_login=".$email."&password_login=".$password);
+		header("location: login.php?username=".$username."&password_login=".$password);
 		exit();
 	}else {
 		die("Query failed");
