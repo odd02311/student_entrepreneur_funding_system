@@ -1,3 +1,16 @@
+
+<form action="login.php" method="POST">
+<table>
+<tr><td>Full Name</td>
+<td><input type="text" name="Username" required></td></tr>
+<tr><td>Password</td>
+<td><input type="password" name="Password" required></td></tr>
+<tr>
+<td><input type="submit" name="Login" value="Login"></td></tr>
+</table>
+</form>
+
+
 <?php
 	//Start session
 	session_start();
@@ -34,8 +47,8 @@
 	}
 	
 	//Sanitize the REQUEST values - parameters may come from GET or POST
-	$login = clean($_REQUEST['username_login']);
-	$password = clean($_REQUEST['password_login']);
+	$login = clean($_REQUEST['username']);
+	$password = clean($_REQUEST['password']);
 	
 	//Input Validations
 	if($login == '') {
@@ -56,7 +69,7 @@
 	}
 	
 	//Create query
-	$qry="SELECT * FROM accounts WHERE username='$login' AND passcode='".md5($_REQUEST['password_login'])."'";
+	$qry="SELECT * FROM accounts WHERE username='$login' AND passcode='".md5($_REQUEST['password'])."'";
 	$result=mysql_query($qry);
 	
 	//Check whether the query was successful or not
@@ -71,7 +84,7 @@
 			exit();
 		}else {
 			//Login failed
-			$errmsg_arr[] = 'Email or password wrong.';
+			$errmsg_arr[] = 'Username or password wrong.';
 			$_SESSION['ERRMSG_ARR'] = $errmsg_arr;
 			//header("location: login_form.php");
 			exit();
