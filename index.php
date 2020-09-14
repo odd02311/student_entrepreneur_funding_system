@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿<?php
+    include dirname(__FILE__) .'./common.php';
+    session_start();
+?>
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -46,8 +51,20 @@
 						</div>
 						<div class="collapse navbar-collapse js-navbar-collapse megabg dropshd ">
 							<ul class="nav navbar-nav">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="login.html">Login</a></li>
+								<li><a href="index.php">Home</a></li>
+								<li>
+
+			                        <?php
+			                            //determines whether user logged in
+			                            if (isLoggedIn()){
+
+			                                echo '<a href="#">' .getUserID() .'</a>';
+			                            } else {
+			                                echo '<a href="login.html">Login/SignUp</a>';
+			                            }
+			                        ?>
+
+								</li>
 							</ul>
 							<div class="search-block">
 								<form>

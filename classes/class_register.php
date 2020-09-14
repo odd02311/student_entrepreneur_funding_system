@@ -55,7 +55,6 @@ class Register {
 			}
 		}
 
-
 		//Create INSERT query
 		$sql = "INSERT INTO accounts(username, password) VALUES('$username','".md5($password)."')";
 		$result = @mysqli_query($link, $sql);
