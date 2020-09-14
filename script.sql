@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS accounts(
 user_id INT UNSIGNED AUTO_INCREMENT KEY,
 username VARCHAR(40) NOT NULL,
 password VARCHAR(100) NOT NULL,
-headimg_url VARCHAR(255) NOT NULL
+headimg_url VARCHAR(255) DEFAULT "/imgages/default.png"
 );
 
 
