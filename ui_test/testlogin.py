@@ -28,8 +28,10 @@ browser.visit(__testUrl)
 print("test page:" + browser.title)
 
 # test login
-test_login('test by empty username and password', '', '', '')
+test_login('test by empty username and password', '', '', 'Username is empty')
 test_login('test by empty username', '', password, 'Username is empty')
 test_login('test by empty password', username, '', 'Password is empty')
-test_login('test by empty password', unregistered_username, password, 'Username is not registered')
-test_login('test by valid username and password', username, password, 'Login successful!')
+test_login('test by empty unregistered username', unregistered_username, password, 'Username or password wrong')
+test_login('test by invalid username or password', username, invalid_password, 'Username or password wrong')
+test_login('test by invalid username or password', invalid_username, password, 'Username or password wrong')
+test_login('test by valid username and password', username, password, 'Login successfully!')
