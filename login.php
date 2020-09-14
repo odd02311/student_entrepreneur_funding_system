@@ -9,10 +9,10 @@
 	$response = $login->login($_REQUEST['username'], $_REQUEST['password']);
 	if($response == "Login successfully") {
 		session_start();
-		$_SESSION['id']=$tableName;
-		//header("location: ".HOMEURL);
+		$_SESSION['id']=$_REQUEST['username'];
+		header("location: ".HOMEURL);
 	}
 	
-	echo $response;
-	//header("location: error.php");
+	echo "<script> window.alert ('".$response."')</script>";
+	echo "<script>window.location='login.html'</script>";
 ?>

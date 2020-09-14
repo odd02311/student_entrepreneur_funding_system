@@ -16,22 +16,24 @@ def test_login(desc, name, passcode, result):
         print('[X] not pass')
 
 
+empty_username = ''
+empty_password = ''
+valid_username = 'test_username'
+valid_password = 'test_password'
 invalid_username = '111'
 invalid_password = '111'
-username = 'test_username'
-password = 'test_password'
-unregistered_username = 'test_password'
+unregistered_username = 'unregistered_password'
 
-__testUrl = 'http://localhost/student_entrepreneur_funding_system/login.php'
+__testUrl = 'http://localhost/student_entrepreneur_funding_system/login.html'
 browser = Browser()  # already support firefox
 browser.visit(__testUrl)
 print("test page:" + browser.title)
 
 # test login
-test_login('test by empty username and password', '', '', 'Username is empty')
-test_login('test by empty username', '', password, 'Username is empty')
-test_login('test by empty password', username, '', 'Password is empty')
-test_login('test by empty unregistered username', unregistered_username, password, 'Username or password wrong')
-test_login('test by invalid username or password', username, invalid_password, 'Username or password wrong')
-test_login('test by invalid username or password', invalid_username, password, 'Username or password wrong')
-test_login('test by valid username and password', username, password, 'Login successfully!')
+test_login('test login by empty', '', '', 'Username is empty')
+test_login('test login by empty username', '', password, 'Username is empty')
+test_login('test login by empty password', username, '', 'Password is empty')
+test_login('test login by unregistered username', unregistered_username, password, 'Username or password wrong')
+test_login('test login by invalid username', username, invalid_password, 'Username or password wrong')
+test_login('test login by invalid password', invalid_username, password, 'Username or password wrong')
+test_login('test login by valid username and password', valid_username, valid_password, 'Login successfully!')
