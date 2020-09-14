@@ -1,12 +1,11 @@
 import re
 import sys
 from splinter.browser import Browser
-sys.setdefaultencoding('utf8')
 
 
-def test_login(desc, name, passcode, result):
+def test_login(desc, name, code, result):
     browser.fill('username', name.decode('utf8'))
-    browser.fill('password', passcode.decode('utf8'))
+    browser.fill('password', code.decode('utf8'))
     browser.find_by_value('login').first.click()
     checkresult(desc, result)
 

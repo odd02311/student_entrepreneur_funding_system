@@ -6,13 +6,13 @@
 	session_start();
 
 	$login = new Login;
-	$response = $login->login($_REQUEST['username'], $_REQUEST['password']);
+	$response = $login->login($_REQUEST['username'], $_REQUEST['password']); 
 	if($response == "Login successfully") {
 		session_start();
 		$_SESSION['id']=$_REQUEST['username'];
-		header("location: ".HOMEURL);
 	}
-	
-	echo "<script> window.alert ('".$response."')</script>";
-	echo "<script>window.location='login.html'</script>";
+
+	// echo "<script> window.alert ('" .$response ."')</script>";
+	// echo "<script>window.location='" .HOMEURL ."'</script>";
+	echo $response
 ?>
