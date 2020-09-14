@@ -14,12 +14,12 @@ class Login {
 	}
 
 	// default value is required for parameters
-	public function login($username = "",$password = "") {
+	public function login($username = "", $password = "") {
 
-		if ($username == ''){
+		if (empty($username)){
 			return 'Please enter your username';
 		}
-		else if ($password == ''){
+		else if (empty($password)){
 			return 'Please enter your password';
 		}
 
