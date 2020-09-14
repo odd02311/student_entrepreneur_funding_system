@@ -120,14 +120,11 @@ casper.test.begin('RegisterTest', 0, function (test) {
             'input[id=repassword]': valid_password
         });
 
-        casper.capture("1.png");
         this.click("#register");
-        casper.capture("2.png");
         this.waitForUrl(index_url, function(){
             test.assertTitle(home_title, 'Register successfully and enter to Home page');
-            casper.capture("3.png");
         });
-        casper.capture("4.png");
+//        casper.capture("4.png");
     });
 
     casper.run(function () {
