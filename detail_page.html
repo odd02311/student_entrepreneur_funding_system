@@ -66,6 +66,14 @@
         #login_click a:hover {
             background: #385f9e;
         }
+        #navigation a {
+            -webkit-transition: all linear 0.30s;
+            -moz-transition: all linear 0.30s;
+            transition: all linear 0.30s;
+        }   
+        #navigation a:hover {
+            background: gray;
+        }
     </style>
 
 </head>
@@ -73,11 +81,11 @@
 <body class="background">
 
     <div style="height: 65px; width: 100%; padding-top: 12px; background-image: url(resources/navigation.jpg);">
-        <span style="height: 65px; width: 100px; padding-left: 35px; font-size: 30px; font-weight: bold;">
-            <a style="color: whitesmoke;">Home</a>
+        <span id="navigation" style="height: 65px; width: 100px; padding-left: 35px; font-size: 30px; font-weight: bold;">
+            <a href=# style="color: whitesmoke;">Home</a>
         </span>
-        <span style="height: 65px; width: 100px; padding-left: 35px; font-size: 30px; font-weight: bold;">
-            <a style="color: whitesmoke;">Login</a>
+        <span id="navigation" style="height: 65px; width: 100px; padding-left: 35px; font-size: 30px; font-weight: bold;">
+            <a href=# style="color: whitesmoke;">Login</a>
         </span>
     </div>
 
