@@ -32,14 +32,16 @@
         }
 
         .bord {
-            border: 1px solid #000;
+            border: 1px solid whitesmoke;
         }
         .bord-dash{
-            border: 1px #000 dashed;
+            border: 1px whitesmoke dashed;
         }
 
         .background {
-            background-image: url(resources/background.jpg);
+            background-image: url(resources/900×500_background.jpg);
+            background-size: cover;
+            background-attachment: fixed;
         }
 
         #login_click {
@@ -70,29 +72,33 @@
 
 <body class="background">
 
-    <div>
-        <img src="resources/user's background.jpg" class="img-responsive" width="100%">
+    <div style="height: 65px; width: 100%; padding-top: 12px; background-image: url(resources/navigation.jpg);">
+        <span style="height: 65px; width: 100px; padding-left: 35px; font-size: 30px; font-weight: bold;">
+            <a style="color: whitesmoke;">Home</a>
+        </span>
+        <span style="height: 65px; width: 100px; padding-left: 35px; font-size: 30px; font-weight: bold;">
+            <a style="color: whitesmoke;">Login</a>
+        </span>
     </div>
 
     <div class="container" style="margin-top: 100px; margin-bottom: 100px;">
 
-        <!-- User's photo, title and subtitle -->
-        <div class="row">
+        <!-- User's photo, name and description -->
+        <div style="height: 100px">
             <div class="col-md-1 col-xs-2 frame2">
-                <img src="resources/photo.jpg" class="img-responsive" height="1000px" name=ownerphoto>
+                <img src="resources/photo.jpg" class="img-responsive" name="ownerphoto">
             </div>
             <div class="col-md-3 frame2">
                 <div style="float: left; width: 100px">
                     <div>
-                        <h4 name="maintitle">Title</h4>
+                        <h4 style="color: whitesmoke;" name="maintitle">Name</h4>
                     </div>
                     <div>
-                        <h4 name="subtitle">Subhead</h4>
+                        <h4 style="color: whitesmoke;" name="subtitle">Description</h4>
                     </div>
                 </div>
             </div>
         </div>
-        <br><br>
 
         <!-- Adaptive video -->
         <div class="row">
@@ -106,13 +112,10 @@
             </div>
         </div>
 
-        <!-- Like and forward -->
+        <!-- Like -->
         <div class="row">
-            <div class="col-md-1 col-xs-2 frame1">
-                <br><a href="#" id="like"><img src="resources/like.jpg" class="img-responsive" height="10px" name="like"></a>
-            </div>
-            <div class="col-md-1 col-xs-2 frame1">
-                <br><a href="#" id="forward"><img src="resources/forward.jpg" class="img-responsive" height="10px" name="like"></a>
+            <div class="col-md-1 col-xs-2 frame1" style="height: 100px;">
+                <br><a href="#" id="like"><img src="resources/like.png" class="img-responsive" height="20px" name="like"></a>
             </div>
         </div>
         <br>
@@ -121,7 +124,7 @@
         <form>
             <textarea cols="75px" rows="10px" style="background-color: whitesmoke;">Enter your comment here</textarea>
             <div id="login_click">
-                <a id="btlogin" href="#">Submit</a>
+                <a href="#" id="btlogin">Submit</a>
             </div>
         </form>
         <br><br><br>
@@ -131,9 +134,9 @@
             <tr style="vertical-align: top; text-align: center">
                 <td height="200px" width="100px" name=touxiang><img src="resources/photo.jpg"class="img-responsive" width="75px"></td>
                 <td class="bord-dash" height="200px" width="800px" name=pinglun>
-                    <div style="float: left; padding-top: 10px; padding-left: 20px;" name="othername">Name</div>
+                    <div style="float: left; padding-top: 10px; padding-left: 20px; color: whitesmoke;" name="othername">Name</div>
                     <br><br>
-                    <div style="float: left; padding-top: 10px; padding-left: 20px;" name="othercomment">Others people'scomments</div>
+                    <div style="float: left; padding-top: 10px; padding-left: 20px; color: whitesmoke;" name="othercomment">Others people'scomments</div>
                 </td>
             </tr>
         </table>
@@ -141,9 +144,9 @@
             <tr style="vertical-align: top; text-align: center">
                 <td height="200px" width="100px" name=touxiang><img src="resources/photo.jpg"class="img-responsive" width="75px"></td>
                 <td class="bord-dash" height="200px" width="800px" name=pinglun>
-                    <div style="float: left; padding-top: 10px; padding-left: 20px;" name="othername">Name</div>
+                    <div style="float: left; padding-top: 10px; padding-left: 20px; color: whitesmoke;" name="othername">Name</div>
                     <br><br>
-                    <div style="float: left; padding-top: 10px; padding-left: 20px;" name="othercomment">Others people'scomments</div>
+                    <div style="float: left; padding-top: 10px; padding-left: 20px; color: whitesmoke;" name="othercomment">Others people'scomments</div>
                 </td>
             </tr>
         </table>
