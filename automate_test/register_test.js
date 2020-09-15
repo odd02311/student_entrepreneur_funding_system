@@ -3,7 +3,9 @@ casper.test.begin('RegisterTest', 0, function (test) {
 
     var title = 'Register';
     var home_title = 'Home';
+    var login_title = 'Login';
     var index_url = 'http://localhost/student_entrepreneur_funding_system/index.php';
+    var login_url = 'http://localhost/student_entrepreneur_funding_system/login.html';
     var register_url = 'http://localhost/student_entrepreneur_funding_system/register.html';
 
     var empty_value = '';
@@ -11,7 +13,6 @@ casper.test.begin('RegisterTest', 0, function (test) {
     var valid_password = 'test_password';
     var invalid_password = '1111';
     var registered_username = '1111';
-
 
     function getValidUsername() {
     　　var $chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678';
@@ -23,10 +24,17 @@ casper.test.begin('RegisterTest', 0, function (test) {
     　　return username;
     }
 
-    casper.start();
-    casper.thenOpen(register_url, function () {
+    casper.start(login_url).then(function () {
+        casper.waitForSelector("form[id='login-form']", function() {
+            test.assertTitle(login_title, 'assert Login Title');
+            test.assertExists('#registerAccount', 'register link is found');
+            test.assertUrlMatch(login_url, 'url match with login page');
+        });
+    });
+
+    casper.thenClick('#registerAccount', function () {
         casper.waitForSelector("form[id='register-form']", function() {
-            test.assertTitle(title, 'assert Title');
+            test.assertTitle(title, 'assert Register Title');
             test.assertExists('#register-form', 'register form is found');
             test.assertExists('#register', 'submit button is found');
             test.assertUrlMatch(register_url, 'url match with register php');

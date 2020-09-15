@@ -13,13 +13,20 @@ casper.test.begin('LoginTest', 0, function (test) {
     var invalid_password = '1111';
 
 
-    casper.start();
-    casper.thenOpen(login_url, function () {
+    casper.start(index_url).then(function () {
+        casper.waitForSelector("a[id='loginLink']", function() {
+            test.assertTitle(home_title, 'assert Home Title');
+            test.assertExists('#loginLink', 'login link is found');
+            test.assertUrlMatch(index_url, 'url match with index page');
+        });
+    });
+
+    casper.thenOpen(login_url, function TestEnterLoginPage() {
         casper.waitForSelector("form[id='login-form']", function() {
-            test.assertTitle(title, 'assert Title');
+            test.assertTitle(title, 'assert Login Title');
             test.assertExists('#login-form', 'login form is found');
             test.assertExists('#signin', 'submit button is found');
-            test.assertUrlMatch(login_url, 'url match with login php');
+            test.assertUrlMatch(login_url, 'url match with login page');
         });
     });
 

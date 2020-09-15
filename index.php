@@ -57,10 +57,9 @@
 			                        <?php
 			                            //determines whether user logged in
 			                            if (isLoggedIn()){
-
 			                                echo '<a href="#">' .getUserID() .'</a>';
 			                            } else {
-			                                echo '<a href="login.html">Login/SignUp</a>';
+			                                echo '<a id="loginLink" href="login.html">Login/SignUp</a>';
 			                            }
 			                        ?>
 
