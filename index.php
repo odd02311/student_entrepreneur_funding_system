@@ -53,7 +53,6 @@
 							<ul class="nav navbar-nav">
 								<li><a href="index.php">Home</a></li>
 								<li>
-
 			                        <?php
 			                            //determines whether user logged in
 			                            if (isLoggedIn()){
@@ -62,7 +61,14 @@
 			                                echo '<a id="loginLink" href="login.html">Login/SignUp</a>';
 			                            }
 			                        ?>
-
+								</li>
+								<li>
+			                        <?php
+			                            //determines whether user logged in
+			                            if (isLoggedIn()){
+			                                echo '<a href="logout.php">logout</a>';
+			                            }
+			                        ?>
 								</li>
 							</ul>
 							<div class="search-block">
