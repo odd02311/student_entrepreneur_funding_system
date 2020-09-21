@@ -174,6 +174,27 @@ switch($act){
                 return '0';
             }
         break;
+    case 'like':
+            $product_id=$_REQUEST['product_id'];
+            $data=array('likes'=>"$likes"); 
+            $res=update($link,$data,$table,"product_id = '{$product_id}'");
+            if($res){
+                echo '1';
+            }
+            else{
+                echo '0';
+            }
+        break;
+    case 'list':
+            $query = "select * from productions"
+            $rows = fetchAll($link, $query);
+            if($rows){
+                return json_encode($rows);
+            }
+            else{
+                return '0';
+            }
+        break;
     case 'mylist':
             $query = "select * from productions where username = " .$id;
             $rows = fetchAll($link, $query);
@@ -184,7 +205,6 @@ switch($act){
                 return '0';
             }
         break;
-
 }
 
 ?>
