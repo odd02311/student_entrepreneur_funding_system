@@ -1,1 +1,0 @@
-# student_entrepreneur_funding_system
