@@ -40,15 +40,16 @@ function insert($link,$data,$table){
  * @return boolean
  */
 function update($link, $data, $table, $where = null) {
+    $set = '';
     foreach ( $data as $key => $val ) {
         $set .= "{$key}='{$val}',";
     }
-        
 
     $set = trim ( $set, ',' );
     $where = $where == null ? '' : ' WHERE ' . $where;
     $query = "UPDATE {$table} SET {$set} {$where}";
-    
+    echo $query;
+
     $res = mysqli_query ( $link, $query );
     if ($res) {
         return mysqli_affected_rows ( $link );
@@ -153,19 +154,36 @@ if (!isLoggedIn()){
     die("you need login firstly");
 }
 
+if (!isset($_REQUEST['act'])){
+    die("no operation");
+}
+
 $link = connect();
 $act=$_REQUEST['act'];
 $id = trim($_SESSION['id']);
 
 switch($act){
+    case 'like':
+            $product_id=$_REQUEST['product_id'];
+
+            $query = "UPDATE productions SET likes = likes +1 WHERE product_id = " .$product_id;
+            $res = mysqli_query ( $link, $query );
+            if($res){
+                echo '1';
+            }
+            else{
+                echo '0';
+            }
+        break;
     case 'add':
+            $likes = 0;
             $username = $id;
             $title = $_REQUEST["title"];
             $category = $_REQUEST["category"];
             $url = $_REQUEST["url"];
             $description = $_REQUEST["description"];
 
-            $data = compact('username','title','description','category','url');
+            $data = compact('username','title','description','category','url', 'likes');
             $res = insert($link, $data, 'productions');
             if($res){
                 return '1';
@@ -174,19 +192,26 @@ switch($act){
                 return '0';
             }
         break;
-    case 'like':
-            $product_id=$_REQUEST['product_id'];
-            $data=array('likes'=>"$likes"); 
-            $res=update($link,$data,$table,"product_id = '{$product_id}'");
+    case 'del':
+            $res = delete($link, $table,"id = ".$id);
             if($res){
-                echo '1';
+            echo '1';
             }
             else{
-                echo '0';
+            echo '2';
             }
+         break;
+    case 'change':
+            $sex=$_REQUEST['sex'];
+            $age=$_REQUEST['age'];
+            $id=$_REQUEST['id'];
+            $username=$_REQUEST['username'];                                
+            $query="SELECT * FROM $table WHERE id='{$id}'";                
+            $row=fetchOne($link, $query);
+             echo json_encode($row);              
         break;
     case 'list':
-            $query = "select * from productions"
+            $query = "select * from productions";
             $rows = fetchAll($link, $query);
             if($rows){
                 return json_encode($rows);
