@@ -9,14 +9,13 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="">
+	<meta name="description" content="Online system for student entrepreneur funding">
 	<meta name="author" content="OrcasThemes">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 	<title>Home</title>
 	<!-- Bootstrap core CSS -->
 	<link href="css/bootstrap.css" rel="stylesheet">
-	<!-- Custom styles for this template -->
-	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/common.css">
 	<link rel="stylesheet" href="css/animation.css">
 	<!--[if IE 7]>
 
@@ -25,7 +24,7 @@
 	<!--[if lt IE 8]>
 <link rel="stylesheet" href="css/ie.css" type="text/css" media="index, projection">
 <![endif]-->
-	<link href="css/lity.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -564,6 +563,22 @@
 				</div>
 			</div>
 		</div>
+
+<div id="footer" class="container-fluid footer-background">
+ <div class="container">
+	<footer>
+
+	   <div class="row copyright-bottom text-center">
+		  <div class="col-md-12 text-center">
+			<h3> 
+				Student Entrepreneur Funding System
+			</h3>
+			 <p>Copyright &copy; 2020.Company name All rights reserved.</p>
+		  </div>
+	   </div>
+	</footer>
+  </div>
+</div>
 
 </body>
 
