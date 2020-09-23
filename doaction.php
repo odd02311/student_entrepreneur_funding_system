@@ -4,6 +4,9 @@ require_once dirname(__FILE__) .'/config.php';
 require_once dirname(__FILE__) .'/common.php';
 
 
+/* make a connection to database
+ * the database information is configured in config.php
+ */
 function connect(){
     $link = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE) or die ( 'Failed to connect to the database<br/>ERROR ' . mysqli_connect_errno () . ':' . mysqli_connect_error () );
     return $link;
@@ -58,7 +61,7 @@ function update($link, $data, $table, $where = null) {
     }
 }
 
-//DELETE FROM user WHERE id=
+
 /**
  * delete operation
  * @param object $link
@@ -76,6 +79,7 @@ function delete($link, $table, $where = null) {
         return false;
     }
 }
+
 
 /**
  * query specific record
@@ -96,7 +100,6 @@ function fetchOne($link, $query, $result_type = MYSQLI_ASSOC) {
         return false;
     }
 }
-
 
 /**
  * query all records
