@@ -180,13 +180,14 @@ switch($act){
         break;
     case 'add':
             $likes = 0;
+            $dislikes = 0;
             $username = $id;
             $title = $_REQUEST["title"];
             $category = $_REQUEST["category"];
             $url = $_REQUEST["url"];
             $description = $_REQUEST["description"];
 
-            $data = compact('username','title','description','category','url', 'likes');
+            $data = compact('username','title','description','category','url', 'likes', 'dislikes');
             $res = insert($link, $data, 'productions');
             if($res){
                 return '1';
