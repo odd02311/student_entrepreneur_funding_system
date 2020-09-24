@@ -10,7 +10,6 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Online system for student entrepreneur funding">
-	<meta name="author" content="OrcasThemes">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 	<title>Home</title>
 	<!-- Bootstrap core CSS -->
@@ -39,15 +38,7 @@
 			<div class="row home-mega-menu ">
 				<div class="col-md-12">
 					<nav class="navbar navbar-default">
-						<div class="navbar-header">
-							<button class="navbar-toggle" type="button" data-toggle="collapse"
-								data-target=".js-navbar-collapse">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-						</div>
+
 						<div class="collapse navbar-collapse js-navbar-collapse megabg dropshd ">
 							<ul class="nav navbar-nav">
 								<li><a href="index.php">Home</a></li>
@@ -88,12 +79,10 @@
 						<article>
 							<h2 class="icon"><i class="fa fa-gears" aria-hidden="true"></i>categories</h2>
 							<ul class="sidebar-links">
-								<li class="fa fa-chevron-right"><a href="#">Lifestyle</a><span>4.000</span></li>
-								<li class="fa fa-chevron-right"><a href="#">World News</a><span>2.000</span></li>
+								<li class="fa fa-chevron-right"><a href="#">Creative Productions</a><span>4.000</span></li>
+								<li class="fa fa-chevron-right"><a href="#">Animation Clips</a><span>2.000</span></li>
 								<li class="fa fa-chevron-right"><a href="#">Funny productions</a><span>650</span></li>
-								<li class="fa fa-chevron-right"><a href="#">Hot Stories</a><span>4.000</span></li>
 								<li class="fa fa-chevron-right"><a href="#">Music Clips</a><span>7.800</span></li>
-								<li class="fa fa-chevron-right"><a href="#">Premier Trailers</a><span>200</span></li>
 							</ul>
 						</article>
 						<div class="clearfix spacer"></div>
