@@ -15,7 +15,6 @@
 	<!-- Bootstrap core CSS -->
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/common.css">
-	<link rel="stylesheet" href="css/animation.css">
 	<!--[if IE 7]>
 
 <![endif]-->
@@ -292,17 +291,17 @@
 					<div class="head-section">
 						<ul class="nav nav-tabs text-center">
 							<li class="active">
-								<a data-toggle="tab" href="#tab1">
+								<a data-toggle="tab" href="">
 									<h2 class="title">latest</h2>
 								</a>
 							</li>
 							<li>
-								<a data-toggle="tab" href="#tab2">
+								<a data-toggle="tab" href="">
 									<h2 class="title">top rated</h2>
 								</a>
 							</li>
 							<li>
-								<a data-toggle="tab" href="#tab3">
+								<a data-toggle="tab" href="">
 									<h2 class="title">most viewed</h2>
 								</a>
 							</li>

@@ -8,8 +8,7 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="description" content="">
-      <meta name="author" content="OrcasThemes">
+      <meta name="description" content="Online system for student entrepreneur funding">
       <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
       <title>Details of a video</title>
       <!-- Bootstrap core CSS -->
@@ -17,7 +16,7 @@
       <!-- Custom styles for this template -->
       <link rel="stylesheet" href="css/common.css">
       <link rel="stylesheet" href="css/details.css">
-      <link rel="stylesheet" href="css/animation.css">
+
       <!--[if IE 7]>
       
       <![endif]-->
@@ -38,15 +37,6 @@
          <div class="row home-mega-menu ">
             <div class="col-md-12">
                <nav class="navbar navbar-default">
-                  <div class="navbar-header">
-                     <button class="navbar-toggle" type="button" data-toggle="collapse"
-                        data-target=".js-navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                     </button>
-                  </div>
                   <div class="collapse navbar-collapse js-navbar-collapse megabg dropshd ">
                      <ul class="nav navbar-nav">
                         <li><a href="index.php">Home</a></li>
@@ -85,14 +75,12 @@
                <aside class="dark-bg">
                   <article>
                      <h2 class="icon"><i class="fa fa-gears" aria-hidden="true"></i>categories</h2>
-                     <ul class="sidebar-links">
-                        <li class="fa fa-chevron-right"><a href="#">Lifestyle</a><span>4.000</span></li>
-                        <li class="fa fa-chevron-right"><a href="#">World News</a><span>2.000</span></li>
-                        <li class="fa fa-chevron-right"><a href="#">Funny productions</a><span>650</span></li>
-                        <li class="fa fa-chevron-right"><a href="#">Hot Stories</a><span>4.000</span></li>
+                      <ul class="sidebar-links">
+                        <li class="fa fa-chevron-right"><a href="#">Creative</a><span>4.000</span></li>
+                        <li class="fa fa-chevron-right"><a href="#">Animation</a><span>2.000</span></li>
+                        <li class="fa fa-chevron-right"><a href="#">Funny</a><span>650</span></li>
                         <li class="fa fa-chevron-right"><a href="#">Music Clips</a><span>7.800</span></li>
-                        <li class="fa fa-chevron-right"><a href="#">Premier Trailers</a><span>200</span></li>
-                     </ul>
+                      </ul>
                   </article>
                   <div class="clearfix spacer"></div>
                </aside>
@@ -109,7 +97,7 @@
                         <div class="video-info">
                            <!-- 16:9 aspect ratio -->
                            <div class="embed-responsive embed-responsive-16by9 video-embed-box">
-                              <iframe src=""  class="embed-responsive-item"></iframe>
+                              <iframe src="https://www.youtube.com/embed/pvPsJFRGleA"  class="embed-responsive-item"></iframe>
                            </div>
                            <h2 class="title main-head-title">Kiss me if I’m wrong but Dinosaurs still exist? Right?s</h2>
                            <div class="metabox">
