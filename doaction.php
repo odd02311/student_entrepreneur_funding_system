@@ -178,8 +178,21 @@ switch($act){
                 echo '0';
             }
         break;
+    case 'incviews':
+            $product_id=$_REQUEST['product_id'];
+
+            $query = "UPDATE productions SET views = views +1 WHERE product_id = " .$product_id;
+            $res = mysqli_query ( $link, $query );
+            if($res){
+                echo '1';
+            }
+            else{
+                echo '0';
+            }
+        break;
     case 'add':
             $likes = 0;
+            $views = 0;
             $dislikes = 0;
             $username = $id;
             $title = $_REQUEST["title"];
@@ -187,7 +200,7 @@ switch($act){
             $url = $_REQUEST["url"];
             $description = $_REQUEST["description"];
 
-            $data = compact('username','title','description','category','url', 'likes', 'dislikes');
+            $data = compact('username','title','description','category','url', 'likes', 'dislikes', 'views');
             $res = insert($link, $data, 'productions');
             if($res){
                 return '1';
