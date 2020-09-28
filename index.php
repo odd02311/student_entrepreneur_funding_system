@@ -14,8 +14,8 @@
 	<title>Home</title>
 	<!-- Bootstrap core CSS -->
 	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/common.css">
 
+	<link rel="stylesheet" href="css/frontend-style.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 
 </head>
@@ -55,13 +55,7 @@
 			                        ?>
 								</li>
 							</ul>
-							<div class="search-block">
-								<form>
-									<input type="search" placeholder="Search">
-								</form>
-							</div>
 						</div>
-						<!-- /.nav-collapse -->
 					</nav>
 				</div>
 			</div>
@@ -73,7 +67,7 @@
 						<article>
 							<h2 class="icon"><i class="fa fa-gears" aria-hidden="true"></i>categories</h2>
 							<ul class="sidebar-links">
-								<li class="fa fa-chevron-right"><a href="#">Animation Clips</a><span>2.000</span></li>
+								<li class="fa fa-chevron-right"><a href="#">Animations</a><span>2.000</span></li>
 								<li class="fa fa-chevron-right"><a href="#">Music Clips</a><span>650</span></li>
 								<li class="fa fa-chevron-right"><a href="#">Articles</a><span>7.800</span></li>
 							</ul>
@@ -94,11 +88,6 @@
 										<div class="post post-medium">
 											<div class="thumbr">
 												<a class="afterglow post-thumb" href="" data-lity>
-													<span class="play-btn-border" title="Play"><i
-															class="fa fa-play-circle headline-round"
-															aria-hidden="true"></i></span>
-													<div class="cactus-note ct-time font-size-1"><span>02:02</span>
-													</div>
 													<img class="img-responsive" src="resources/overview_1.jpg" alt="#">
 												</a>
 											</div>
@@ -116,11 +105,6 @@
 										<div class="post post-medium">
 											<div class="thumbr">
 												<a class="post-thumb" href="" data-lity>
-													<span class="play-btn-border" title="Play"><i
-															class="fa fa-play-circle headline-round"
-															aria-hidden="true"></i></span>
-													<div class="cactus-note ct-time font-size-1"><span>02:02</span>
-													</div>
 													<img class="img-responsive" src="resources/overview_2.jpg" alt="#">
 												</a>
 											</div>
@@ -138,11 +122,6 @@
 										<div class="post post-medium">
 											<div class="thumbr">
 												<a class="post-thumb" href="" data-lity>
-													<span class="play-btn-border" title="Play"><i
-															class="fa fa-play-circle headline-round"
-															aria-hidden="true"></i></span>
-													<div class="cactus-note ct-time font-size-1"><span>02:02</span>
-													</div>
 													<img class="img-responsive" src="resources/overview_3.jpg" alt="#">
 												</a>
 											</div>
@@ -160,11 +139,6 @@
 										<div class="post post-medium">
 											<div class="thumbr">
 												<a class="post-thumb" href="" data-lity>
-													<span class="play-btn-border" title="Play"><i
-															class="fa fa-play-circle headline-round"
-															aria-hidden="true"></i></span>
-													<div class="cactus-note ct-time font-size-1"><span>02:02</span>
-													</div>
 													<img class="img-responsive" src="resources/overview_4.jpg" alt="#">
 												</a>
 											</div>
@@ -182,11 +156,6 @@
 										<div class="post post-medium">
 											<div class="thumbr">
 												<a class="post-thumb" href="" data-lity>
-													<span class="play-btn-border" title="Play"><i
-															class="fa fa-play-circle headline-round"
-															aria-hidden="true"></i></span>
-													<div class="cactus-note ct-time font-size-1"><span>02:02</span>
-													</div>
 													<img class="img-responsive" src="resources/overview_5.jpg" alt="#">
 												</a>
 											</div>
@@ -204,11 +173,6 @@
 										<div class="post post-medium">
 											<div class="thumbr">
 												<a class="post-thumb" href="" data-lity>
-													<span class="play-btn-border" title="Play"><i
-															class="fa fa-play-circle headline-round"
-															aria-hidden="true"></i></span>
-													<div class="cactus-note ct-time font-size-1"><span>02:02</span>
-													</div>
 													<img class="img-responsive" src="resources/overview_6.jpg" alt="#">
 												</a>
 											</div>
@@ -226,11 +190,6 @@
 										<div class="post post-medium">
 											<div class="thumbr">
 												<a class="post-thumb" href="" data-lity>
-													<span class="play-btn-border" title="Play"><i
-															class="fa fa-play-circle headline-round"
-															aria-hidden="true"></i></span>
-													<div class="cactus-note ct-time font-size-1"><span>02:02</span>
-													</div>
 													<img class="img-responsive" src="resources/overview_7.jpg" alt="#">
 												</a>
 											</div>
@@ -248,11 +207,6 @@
 										<div class="post post-medium">
 											<div class="thumbr">
 												<a class="post-thumb" href="" data-lity>
-													<span class="play-btn-border" title="Play"><i
-															class="fa fa-play-circle headline-round"
-															aria-hidden="true"></i></span>
-													<div class="cactus-note ct-time font-size-1"><span>02:02</span>
-													</div>
 													<img class="img-responsive" src="resources/overview_8.jpg" alt="#">
 												</a>
 											</div>
@@ -309,10 +263,6 @@
 								<article class="col-lg-2 col-md-4 col-sm-4 post post-medium">
 									<div class="thumbr">
 										<a class="post-thumb" href="" data-lity>
-											<span class="play-btn-border" title="Play"><i
-													class="fa fa-play-circle headline-round"
-													aria-hidden="true"></i></span>
-											<div class="cactus-note ct-time font-size-1"><span>02:02</span></div>
 											<img class="img-responsive" src="img/covers/thumb-tab.jpg" alt="#">
 										</a>
 									</div>
@@ -328,10 +278,6 @@
 								<article class="col-lg-2 col-md-4 col-sm-4 post post-medium">
 									<div class="thumbr">
 										<a class="post-thumb" href="" data-lity>
-											<span class="play-btn-border" title="Play"><i
-													class="fa fa-play-circle headline-round"
-													aria-hidden="true"></i></span>
-											<div class="cactus-note ct-time font-size-1"><span>02:02</span></div>
 											<img class="img-responsive" src="img/covers/thumb-tab2.jpg" alt="#">
 										</a>
 									</div>
@@ -347,10 +293,6 @@
 								<article class="col-lg-2 col-md-4 col-sm-4 post post-medium">
 									<div class="thumbr">
 										<a class="post-thumb" href="" data-lity>
-											<span class="play-btn-border" title="Play"><i
-													class="fa fa-play-circle headline-round"
-													aria-hidden="true"></i></span>
-											<div class="cactus-note ct-time font-size-1"><span>02:02</span></div>
 											<img class="img-responsive" src="img/covers/thumb-tab3.jpg" alt="#">
 										</a>
 									</div>
@@ -366,10 +308,6 @@
 								<article class="col-lg-2 col-md-4 col-sm-4 post post-medium">
 									<div class="thumbr">
 										<a class="post-thumb" href="" data-lity>
-											<span class="play-btn-border" title="Play"><i
-													class="fa fa-play-circle headline-round"
-													aria-hidden="true"></i></span>
-											<div class="cactus-note ct-time font-size-1"><span>02:02</span></div>
 											<img class="img-responsive" src="img/covers/thumb-tab4.jpg" alt="#">
 										</a>
 									</div>
@@ -385,10 +323,6 @@
 								<article class="col-lg-2 col-md-4 col-sm-4 post post-medium">
 									<div class="thumbr">
 										<a class="post-thumb" href="" data-lity>
-											<span class="play-btn-border" title="Play"><i
-													class="fa fa-play-circle headline-round"
-													aria-hidden="true"></i></span>
-											<div class="cactus-note ct-time font-size-1"><span>02:02</span></div>
 											<img class="img-responsive" src="img/covers/thumb-tab5.jpg" alt="#">
 										</a>
 									</div>
@@ -404,10 +338,6 @@
 								<article class="col-lg-2 col-md-4 col-sm-4 post post-medium">
 									<div class="thumbr">
 										<a class="post-thumb" href="" data-lity>
-											<span class="play-btn-border" title="Play"><i
-													class="fa fa-play-circle headline-round"
-													aria-hidden="true"></i></span>
-											<div class="cactus-note ct-time font-size-1"><span>02:02</span></div>
 											<img class="img-responsive" src="img/covers/thumb-tab6.jpg" alt="#">
 										</a>
 									</div>
@@ -425,10 +355,6 @@
 								<article class="col-lg-2 col-md-4 col-sm-4 post post-medium">
 									<div class="thumbr">
 										<a class="post-thumb" href="" data-lity>
-											<span class="play-btn-border" title="Play"><i
-													class="fa fa-play-circle headline-round"
-													aria-hidden="true"></i></span>
-											<div class="cactus-note ct-time font-size-1"><span>02:02</span></div>
 											<img class="img-responsive" src="img/covers/thumb-tab.jpg" alt="#">
 										</a>
 									</div>
@@ -445,10 +371,6 @@
 								<article class="col-lg-2 col-md-4 col-sm-4 post post-medium">
 									<div class="thumbr">
 										<a class="post-thumb" href="" data-lity>
-											<span class="play-btn-border" title="Play"><i
-													class="fa fa-play-circle headline-round"
-													aria-hidden="true"></i></span>
-											<div class="cactus-note ct-time font-size-1"><span>02:02</span></div>
 											<img class="img-responsive" src="img/covers/thumb-tab2.jpg" alt="#">
 										</a>
 									</div>
@@ -464,10 +386,6 @@
 								<article class="col-lg-2 col-md-4 col-sm-4 post post-medium">
 									<div class="thumbr">
 										<a class="post-thumb" href="" data-lity>
-											<span class="play-btn-border" title="Play"><i
-													class="fa fa-play-circle headline-round"
-													aria-hidden="true"></i></span>
-											<div class="cactus-note ct-time font-size-1"><span>02:02</span></div>
 											<img class="img-responsive" src="img/covers/thumb-tab3.jpg" alt="#">
 										</a>
 									</div>
@@ -483,10 +401,6 @@
 								<article class="col-lg-2 col-md-4 col-sm-4 post post-medium">
 									<div class="thumbr">
 										<a class="post-thumb" href="" data-lity>
-											<span class="play-btn-border" title="Play"><i
-													class="fa fa-play-circle headline-round"
-													aria-hidden="true"></i></span>
-											<div class="cactus-note ct-time font-size-1"><span>02:02</span></div>
 											<img class="img-responsive" src="img/covers/thumb-tab4.jpg" alt="#">
 										</a>
 									</div>
@@ -503,10 +417,6 @@
 								<article class="col-lg-2 col-md-4 col-sm-4 post post-medium">
 									<div class="thumbr">
 										<a class="post-thumb" href="" data-lity>
-											<span class="play-btn-border" title="Play"><i
-													class="fa fa-play-circle headline-round"
-													aria-hidden="true"></i></span>
-											<div class="cactus-note ct-time font-size-1"><span>02:02</span></div>
 											<img class="img-responsive" src="img/covers/thumb-tab5.jpg" alt="#">
 										</a>
 									</div>
@@ -522,10 +432,6 @@
 								<article class="col-lg-2 col-md-4 col-sm-4 post post-medium">
 									<div class="thumbr">
 										<a class="post-thumb" href="" data-lity>
-											<span class="play-btn-border" title="Play"><i
-													class="fa fa-play-circle headline-round"
-													aria-hidden="true"></i></span>
-											<div class="cactus-note ct-time font-size-1"><span>02:02</span></div>
 											<img class="img-responsive" src="img/covers/thumb-tab6.jpg" alt="#">
 										</a>
 									</div>
