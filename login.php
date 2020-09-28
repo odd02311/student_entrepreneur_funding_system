@@ -10,10 +10,16 @@
 
 	$login = new Login;
 	$response = $login->login($username, $password); 
-	if($response == "Login successfully") {
-		session_start();
+	if($response == "Admin login successfully") {
 		$_SESSION['id']=$_REQUEST['username'];
+		$_SESSION['admin']= 1;
 //		header("location: " .HOMEURL);
 	}
+	else if($response == "Login successfully") {
+		$_SESSION['id']=$_REQUEST['username'];
+		$_SESSION['admin']= 0;
+//		header("location: " .HOMEURL);
+	}
+
 	echo $response;
 ?>
