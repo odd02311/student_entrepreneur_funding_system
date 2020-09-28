@@ -15,6 +15,7 @@
 	<!-- Bootstrap core CSS -->
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/common.css">
+
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 
 </head>
