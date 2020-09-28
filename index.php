@@ -13,7 +13,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 	<title>Home</title>
 	<!-- Bootstrap core CSS -->
-	<link href="css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/common.css">
 	<!--[if IE 7]>
 
