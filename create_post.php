@@ -1,3 +1,9 @@
+<?php
+    include dirname(__FILE__) .'./common.php';
+    session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,7 +49,7 @@
                         </li>
                         <li class="active"> <a href="create_post.html" aria-expanded="false"><span>Make a post</span></a>
                         </li>
-                        <li> <li> <a href="logout.php"><span>Logout</span></a>
+                        <li> <a href="logout.php"><span>Logout</span></a>
                         </li>
                     </ul>
                 </nav>
@@ -57,35 +63,36 @@
                 <!-- Row -->
                 <div class="row">
 
-                    <form class="form-horizontal">
+                    <form class="form-horizontal" method='get' action='doaction.php'>
+                        <input type="hidden" name="act" value="add">
                         <div class="form-group">
                             <label class="col-md-12">Title</label>
                             <div class="col-md-12">
-                                <input type="text" placeholder="Title" class="form-control form-control-line">
+                                <input type="text" name='title' placeholder="Title" class="form-control form-control-line">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-12">Author</label>
                             <div class="col-md-12">
-                                <input type="text" placeholder="Author name" class="form-control form-control-line">
+                                <input type="text" name='author' placeholder="Author name" class="form-control form-control-line">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-12">Url</label>
                             <div class="col-md-12">
-                                <input type="text" placeholder="Url" class="form-control form-control-line">
+                                <input type="text" name='url' placeholder="Url" class="form-control form-control-line">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-12">Description</label>
                             <div class="col-md-12">
-                                <textarea rows="10" class="form-control form-control-line"></textarea>
+                                <textarea name='desc' rows="10" cols="50" class="form-control form-control-line"></textarea>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-12">Category</label>
                             <div class="col-sm-12">
-                                <select class="form-control form-control-line">
+                                <select name='category' class="form-control form-control-line">
                                     <option>Video</option>
                                     <option>Music clip</option>
                                     <option>Animation</option>
@@ -94,7 +101,7 @@
                         </div>
                         <div class="form-group">
                             <div class="col-sm-12">
-                                <button class="btn btn-success">Post</button>
+                                <button type="submit" class="btn btn-success">Post</button>
                             </div>
                         </div>
                     </form>
@@ -103,7 +110,7 @@
 
             </div>
         </div>
-
+</div>
 </body>
 
 </html>
