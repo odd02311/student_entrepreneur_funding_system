@@ -157,6 +157,8 @@ if (!isLoggedIn()){
     die("you need login firstly");
 }
 
+var_dump($_REQUEST);
+
 if (!isset($_REQUEST['act'])){
     die("no operation");
 }
@@ -191,16 +193,18 @@ switch($act){
             }
         break;
     case 'add':
+
             $likes = 0;
             $views = 0;
             $dislikes = 0;
             $username = $id;
             $title = $_REQUEST["title"];
+            $author = $_REQUEST["author"];
             $category = $_REQUEST["category"];
             $url = $_REQUEST["url"];
-            $description = $_REQUEST["description"];
+            $description = $_REQUEST["desc"];
 
-            $data = compact('username','title','description','category','url', 'likes', 'dislikes', 'views');
+            $data = compact('username','title','author','description','category','url', 'likes', 'dislikes', 'views');
             $res = insert($link, $data, 'productions');
             if($res){
                 return '1';
