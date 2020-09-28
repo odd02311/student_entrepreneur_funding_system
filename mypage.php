@@ -39,7 +39,7 @@
                     <ul id="sidebarnav">
                         <li> <a href="index.php" ><span>Home</span></a>
                         </li>
-                        <li class="active"> <a href="profile.html" aria-expanded="false"><span>Profile</span></a>
+                        <li class="active"> <a href="mypage.php" aria-expanded="false"><span>Profile</span></a>
                         </li>
                         <li> <a href="create_post.php" aria-expanded="false"><span>Create a post</span></a>
                         </li>
