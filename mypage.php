@@ -41,7 +41,7 @@
                         </li>
                         <li class="active"> <a href="profile.html" aria-expanded="false"><span>Profile</span></a>
                         </li>
-                        <li> <a href="create_post.html" aria-expanded="false"><span>Create a post</span></a>
+                        <li> <a href="create_post.php" aria-expanded="false"><span>Create a post</span></a>
                         </li>
                         <li> <li> <a href="logout.php"><span>Logout</span></a>
                         </li>
@@ -207,7 +207,7 @@
                                             <div class="form-group">
                                                 <label class="col-md-12">Password</label>
                                                 <div class="col-md-12">
-                                                    <input type="password" value="password" class="form-control form-control-line">
+                                                    <input type="password" class="form-control form-control-line">
                                                 </div>
                                             </div>
                                             <div class="form-group">

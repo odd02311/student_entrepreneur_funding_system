@@ -157,8 +157,6 @@ if (!isLoggedIn()){
     die("you need login firstly");
 }
 
-var_dump($_REQUEST);
-
 if (!isset($_REQUEST['act'])){
     die("no operation");
 }
@@ -193,7 +191,6 @@ switch($act){
             }
         break;
     case 'add':
-
             $likes = 0;
             $views = 0;
             $dislikes = 0;
@@ -201,16 +198,17 @@ switch($act){
             $title = $_REQUEST["title"];
             $author = $_REQUEST["author"];
             $category = $_REQUEST["category"];
-            $url = $_REQUEST["url"];
+            $pic_url = $_REQUEST["pic_url"];
+            $video_url = $_REQUEST["video_url"];
             $description = $_REQUEST["desc"];
 
-            $data = compact('username','title','author','description','category','url', 'likes', 'dislikes', 'views');
+            $data = compact('username','title','author','description','category','pic_url', 'video_url', 'likes', 'dislikes', 'views');
             $res = insert($link, $data, 'productions');
             if($res){
-                return '1';
+                echo 'Post successfully';
             }
             else{
-                return '0';
+                echo 'Post failed';
             }
         break;
     case 'del':
