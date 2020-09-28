@@ -11,26 +11,18 @@
       <meta name="description" content="Online system for student entrepreneur funding">
       <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
       <title>Details of a video</title>
-      <!-- Bootstrap core CSS -->
-      <link href="css/bootstrap.css" rel="stylesheet">
-      <!-- Custom styles for this template -->
-      <link rel="stylesheet" href="css/common.css">
-      <link rel="stylesheet" href="css/details.css">
 
-      <!--[if IE 7]>
-      
-      <![endif]-->
-      <link rel="stylesheet" href="css/font-awesome.css">
-      <!--[if lt IE 8]>
-      <link rel="stylesheet" href="css/ie.css" type="text/css" media="screen, projection">
-      <![endif]-->
+      <link rel="stylesheet" href="css/details.css">
+      <link rel="stylesheet" href="css/frontend-style.css">
+      <link rel="stylesheet" href="css/font-awesome.min.css">
+      <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.3.3.6.css">
 
    </head>
    <body>
       <!-- SINGLE VIDEO -->
       <div id="single-video" class="container-fluid standard-bg">
 
-         <div class="detail-title" style="padding-left: 25px;">
+         <div class="main-title" style="padding-left: 25px;">
             Student Entrepreneur Funding System
          </div>
          <!-- MENU -->
@@ -59,11 +51,6 @@
                                  ?>
                         </li>
                      </ul>
-                     <div class="search-block">
-                        <form>
-                           <input type="search" placeholder="Search">
-                        </form>
-                     </div>
                   </div>
                </nav>
             </div>
@@ -76,10 +63,9 @@
                   <article>
                      <h2 class="icon"><i class="fa fa-gears" aria-hidden="true"></i>categories</h2>
                       <ul class="sidebar-links">
-                        <li class="fa fa-chevron-right"><a href="#">Creative</a><span>4.000</span></li>
-                        <li class="fa fa-chevron-right"><a href="#">Animation</a><span>2.000</span></li>
-                        <li class="fa fa-chevron-right"><a href="#">Funny</a><span>650</span></li>
-                        <li class="fa fa-chevron-right"><a href="#">Music Clips</a><span>7.800</span></li>
+                        <li class="fa fa-chevron-right"><a href="#">Animations</a><span>2.000</span></li>
+                        <li class="fa fa-chevron-right"><a href="#">Music Clips</a><span>650</span></li>
+                        <li class="fa fa-chevron-right"><a href="#">Articles</a><span>7.800</span></li>
                       </ul>
                   </article>
                   <div class="clearfix spacer"></div>
@@ -108,7 +94,7 @@
                               <i class="fa fa-thumbs-down" aria-hidden="true"></i>3.981
                               </span>
                               <span class="meta-i">
-                              <i class="fa fa-user"></i><a href="#" class="author" title="John Doe">John Doe</a>
+                              <i class="fa fa-user"></i>John Doe</a>
                               </span>
                               <span class="meta-i">
                               <i class="fa fa-clock-o"></i>March 16. 2017
@@ -143,7 +129,7 @@
 								<form>
 									<textarea placeholder="Your comment goes here" ></textarea>
 									<div class="comment-box-control">
-										<button type="submit" class="btn pull-right">post comment</button>
+										<button type="submit" class="btn pull-right">Post</button>
 									</div>
 								</form>
 							</div><!-- Status Upload  -->
@@ -208,7 +194,6 @@
          <h3> 
             Student Entrepreneur Funding System
          </h3>
-          <p>Copyright &copy; 2020.Company name All rights reserved.</p>
         </div>
       </div>
    </footer>

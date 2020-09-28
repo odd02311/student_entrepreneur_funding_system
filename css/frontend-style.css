@@ -4,10 +4,10 @@
 
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../font/fontawesome-webfont.eot?v=3.0.1');
-  src: url('../font/fontawesome-webfont.eot?#iefix&v=3.0.1') format('embedded-opentype'),
-    url('../font/fontawesome-webfont.woff?v=3.0.1') format('woff'),
-    url('../font/fontawesome-webfont.ttf?v=3.0.1') format('truetype');
+  src: url('../fonts/fontawesome-webfont.eot?v=3.0.1');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=3.0.1') format('embedded-opentype'),
+    url('../fonts/fontawesome-webfont.woff?v=3.0.1') format('woff'),
+    url('../fonts/fontawesome-webfont.ttf?v=3.0.1') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,8 +15,8 @@
 :root {
   --primary-color: #4280e6;
   --secondary-color: #3764ae;
-  --third-color: #fff;
-  --primary-bgcolor: #fff;
+  --third-color: green;
+  --primary-bgcolor: white;
 }
 
 /* BASE */
@@ -25,7 +25,7 @@ html { font-size:100%; }
 body {font-size:16px;color:#566bd3;font-family: 'Roboto Condensed', sans-serif;background-color: #fff;text-decoration:none;margin:0;padding:0;}
 
 .dark-bg {
-	background-color: rgba(7,7,7, 0.7);
+	background-color: rgb(107 151 204 / 70%);
 }
 
 .megabg {
@@ -42,6 +42,8 @@ body {font-size:16px;color:#566bd3;font-family: 'Roboto Condensed', sans-serif;b
 	font-size: 30px;
 	color:#000;
 }
+
+.user-photo  {border-radius:100%; max-width: 40px;}
 
 .navbar-collapse {
 	border-radius:6px;
@@ -107,6 +109,10 @@ ul.sidebar-links li:hover span {
 }
 
 ul.sidebar-links li:last-child {border-bottom:0;}
+
+.posts-txt {
+	color: #d74c2c;
+}
 
 a.post-thumb {
     background-color: #000000;
@@ -211,7 +217,7 @@ h2.icon {
     -o-transform: skew(-15deg);
     -ms-transform: skew(-15deg);
 	text-transform:uppercase;
-	font-size:30px;
+	font-size:22px;
 	letter-spacing: -0.6px;
 	margin:0px 0px 15px 0;
 }
