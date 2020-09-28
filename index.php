@@ -15,13 +15,7 @@
 	<!-- Bootstrap core CSS -->
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/common.css">
-	<!--[if IE 7]>
-
-<![endif]-->
-	<link rel="stylesheet" href="css/font-awesome.css">
-	<!--[if lt IE 8]>
-<link rel="stylesheet" href="css/ie.css" type="text/css" media="index, projection">
-<![endif]-->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
 
 </head>
 
@@ -78,10 +72,9 @@
 						<article>
 							<h2 class="icon"><i class="fa fa-gears" aria-hidden="true"></i>categories</h2>
 							<ul class="sidebar-links">
-								<li class="fa fa-chevron-right"><a href="#">Creative Productions</a><span>4.000</span></li>
 								<li class="fa fa-chevron-right"><a href="#">Animation Clips</a><span>2.000</span></li>
-								<li class="fa fa-chevron-right"><a href="#">Funny productions</a><span>650</span></li>
-								<li class="fa fa-chevron-right"><a href="#">Music Clips</a><span>7.800</span></li>
+								<li class="fa fa-chevron-right"><a href="#">Music Clips</a><span>650</span></li>
+								<li class="fa fa-chevron-right"><a href="#">Articles</a><span>7.800</span></li>
 							</ul>
 						</article>
 						<div class="clearfix spacer"></div>
@@ -561,7 +554,6 @@
 			<h3> 
 				Student Entrepreneur Funding System
 			</h3>
-			 <p>Copyright &copy; 2020.Company name All rights reserved.</p>
 		  </div>
 	   </div>
 	</footer>
