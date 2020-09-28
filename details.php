@@ -63,9 +63,9 @@
                   <article>
                      <h2 class="icon"><i class="fa fa-gears" aria-hidden="true"></i>categories</h2>
                       <ul class="sidebar-links">
-                        <li class="fa fa-chevron-right"><a href="#">Animations</a><span>2.000</span></li>
-                        <li class="fa fa-chevron-right"><a href="#">Music Clips</a><span>650</span></li>
-                        <li class="fa fa-chevron-right"><a href="#">Articles</a><span>7.800</span></li>
+                        <li class="fa fa-chevron-right"><a href="#">Video</a><span>7.800</span></li>
+                        <li class="fa fa-chevron-right"><a href="#">Animation</a><span>2.000</span></li>
+                        <li class="fa fa-chevron-right"><a href="#">Music Clip</a><span>650</span></li>
                       </ul>
                   </article>
                   <div class="clearfix spacer"></div>
