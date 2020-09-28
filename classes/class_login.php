@@ -45,12 +45,13 @@ class Login {
 				//session_regenerate_id();
 				$account = mysqli_fetch_assoc($result);
 
-				if($account['is_admin']){
-					return "Admin login successfully";
-				}
-				else{
-					return "Login successfully";
-				}
+
+				$_SESSION['id'] = $account['username'];
+				$_SESSION['admin'] = $account['is_admin'];
+
+				session_write_close();
+				return "Login successfully";
+
 			}else {
 				//Login failed
 				return 'Username or password wrong';

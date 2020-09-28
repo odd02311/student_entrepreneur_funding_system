@@ -61,6 +61,10 @@ class Register {
 
 		//Check whether the query was successful or not
 		if($result) {
+
+			$_SESSION['id'] = $username;
+			$_SESSION['admin'] = 0;
+			session_write_close();
 			return 'Register successfully';
 		}
 		return 'Query failed';

@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	//Include database connection details
 	require_once dirname(__FILE__). './classes/class_register.php';
 

@@ -9,7 +9,7 @@
 	function isAdmin()
 	{
 		return (isset($_SESSION['admin']) &&
-		       	(trim($_SESSION['admin']) != ''));
+		       	(trim($_SESSION['admin']) == 1));
 	}
 
 	function getUserID()
