@@ -4,7 +4,7 @@ casper.test.begin('LoginTest', 0, function (test) {
     var title = 'Login';
     var home_title = 'Home';
     var index_url = 'http://localhost/student_entrepreneur_funding_system/index.php';
-    var login_url = 'http://localhost/student_entrepreneur_funding_system/login.html';
+    var login_url = 'http://localhost/student_entrepreneur_funding_system/login.php';
 
     var empty_value = '';
     var valid_username = 'test_username';

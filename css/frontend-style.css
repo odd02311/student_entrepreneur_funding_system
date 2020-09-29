@@ -246,3 +246,9 @@ h2.icon i {
 h2.icon:hover i {
 	border:5px solid var(--secondary-color);
 }
+
+footer {
+	margin-top: 40px;
+
+}
+

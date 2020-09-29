@@ -43,7 +43,7 @@
 			                                	echo '<a href="mypage.php">' .getUserID() .'</a>';
 			                                }
 			                            } else {
-			                            	echo '<a id="loginLink" href="login.html">Login/SignUp</a>';
+			                            	echo '<a id="loginLink" href="login.php">Login/SignUp</a>';
 			                            }
 			                        ?>
 								</li>

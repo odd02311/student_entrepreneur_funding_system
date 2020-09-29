@@ -90,7 +90,7 @@
                                        </div>
                                        <div id="hints" style="color:red"></div>
                                        <div class="login-btn-box">
-                                       	  <input type="button" name="signin" id="signin" class="btn btn-success" value="login Now"/>
+                                       	  <input type="button" name="signin" id="signin" class="btn btn-success" value="login Now" />
                                        </div>
                                     </form>
                                  </div>
@@ -116,7 +116,7 @@
 	   </div>
 	</footer>
 
-    <script src="assets/plugins/jquery/jquery.min.js"></script>
+
     <script>
         $("#username").click(function () {
             $("#hints").html('');
@@ -131,7 +131,7 @@
             };
 
             $.ajax({
-                url:"/student_entrepreneur_funding_system/dologin.php",
+                url:"/student_entrepreneur_funding_system/login.php",
                 data:param,
                 type:"POST",
                 dataType:"text",

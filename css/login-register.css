@@ -1,0 +1,28 @@
+.loginbg {
+	max-width: 400px;
+}
+
+
+.login-inputicon {
+    float: none;
+	padding:15px;
+    position: absolute;
+    z-index: 2;
+    color: #ddd;
+	margin-right:25px;
+	border-right:1px solid #ddd;
+}
+
+.register-form .input-group {
+	margin-bottom:15px;
+	display:inline-block;
+	width:100%;
+}
+
+.input-group input {
+	display:inline-block;
+	border:1px solid #ddd;
+	padding:12px 12px 12px 55px;
+
+	border-radius:6px;
+}
