@@ -23,7 +23,7 @@ invalid_username = '111'
 invalid_password = '111'
 unregistered_username = 'unregistered_password'
 
-__testUrl = 'http://localhost/student_entrepreneur_funding_system/login.html'
+__testUrl = 'http://localhost/student_entrepreneur_funding_system/login.php'
 browser = Browser()  # already support firefox
 browser.visit(__testUrl)
 print("test page:" + browser.title)

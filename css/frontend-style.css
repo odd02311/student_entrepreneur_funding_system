@@ -24,11 +24,11 @@ html, body { height: 100% !important; height:auto; margin: 0 auto;  background-c
 html { font-size:100%; }
 body {font-size:16px;color:#566bd3;font-family: 'Roboto Condensed', sans-serif;background-color: #fff;text-decoration:none;margin:0;padding:0;}
 
-.dark-bg {
+.blue-bg {
 	background-color: rgb(107 151 204 / 70%);
 }
 
-.megabg {
+.navbg {
 	background: rgb(41,41,41);
 	background: -moz-linear-gradient(top,  rgb(30 136 229 / 92%) 28%,rgb(30 136 229 / 92%) 76%);
 	background: -webkit-linear-gradient(top,  rgb(30 136 229 / 92%) 28%,rgb(30 136 229 / 92%) 76%);
@@ -246,3 +246,9 @@ h2.icon i {
 h2.icon:hover i {
 	border:5px solid var(--secondary-color);
 }
+
+footer {
+	margin-top: 40px;
+
+}
+
