@@ -116,7 +116,7 @@
                         <div class="video-content">
                            <h2 class="title main-head-title">Video Details</h2>
                            <p>
-                              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                              It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                            </p>
                         </div>
                      </article>
@@ -146,7 +146,7 @@
 							<div class="col-sm-11">
 								<div class="panel panel-default">
 									<div class="panel-heading">
-										<strong>Kelvin</strong> <span class="pull-right">2020.7.4 18:00</span>
+										<strong>Joe</strong> <span class="pull-right">2020.7.20 18:00</span>
 									</div>
 									<div class="panel-body">
 										Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -154,23 +154,59 @@
 								</div>
 							</div>
 						
-							<div class="col-sm-1">
-								<div class="thumbnail">
-									<img class="img-responsive user-photo" src="img/headimg/2.png" alt="Comment User Avatar">
-								</div>
-							</div>
+              <div class="col-sm-1">
+                <div class="thumbnail">
+                  <img class="img-responsive user-photo" src="img/headimg/2.png" alt="Comment User Avatar">
+                </div>
+              </div>
 
-							<div class="col-sm-11">
-								<div class="panel panel-default">
-									<div class="panel-heading">
-										<strong>Andy Lee</strong> <span class="pull-right">2020.7.4 11:00</span>
-									</div>
-									<div class="panel-body">
-										Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting
-									</div>
-								</div>
-							</div>
-						</div>
+              <div class="col-sm-11">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <strong>Andy Lee</strong> <span class="pull-right">2020.7.4 11:00</span>
+                  </div>
+                  <div class="panel-body">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+              <div class="col-sm-1">
+                <div class="thumbnail">
+                  <img class="img-responsive user-photo" src="img/headimg/3.png" alt="Comment User Avatar">
+                </div>
+              </div>
+
+              <div class="col-sm-11">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <strong>Andy Lee</strong> <span class="pull-right">2020.7.4 11:00</span>
+                  </div>
+                  <div class="panel-body">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+              <div class="col-sm-1">
+                <div class="thumbnail">
+                  <img class="img-responsive user-photo" src="img/headimg/4.png" alt="Comment User Avatar">
+                </div>
+              </div>
+
+              <div class="col-sm-11">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <strong>Andy Lee</strong> <span class="pull-right">2020.7.4 11:00</span>
+                  </div>
+                  <div class="panel-body">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                  </div>
+                </div>
+              </div>
+            </div>
 
 					</section>
 				  
