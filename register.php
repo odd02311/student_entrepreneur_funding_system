@@ -11,7 +11,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Online system for student entrepreneur funding">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-	<title>Login</title>
+	<title>Register</title>
 	<link rel="stylesheet" href="css/login-register.css">
 	<link rel="stylesheet" href="css/frontend-style.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
@@ -73,27 +73,29 @@
                            	  <div class="col-md-1"></div>
                               <div class="clearfix spacer"></div>
                               <div class="col-md-5">
-                              	<img class="loginbg" src="img/login/login.jpg">
+                              	<img class="loginbg" src="img/register/reg.jpg">
                               </div>
                               
                               <div class="col-md-5">
                                  <div class="register-form">
-                                    <h2 class="title main-head-title">Login</h2>
-                                    <form id='login-form' method="post">
+                                    <h2 class="title main-head-title">CREATE YOUR ACCOUNT</h2>
+                                    <form id= "register-form" method="post">
                                        <div class="input-group">
                                           <span class="fa fa-user login-inputicon"></span>
-                                          <input type="text" id="username" placeholder="Enter your username" required>
+                                          <input type="text" id="username" placeholder="Username" required>
                                        </div>
                                        <div class="input-group">
                                           <span class="fa fa-lock login-inputicon"></span>
-                                          <input type="password" id="password" placeholder="Enter your password" required> 
+                                          <input type="password" id="password" placeholder="Password" required> 
                                        </div>
-                                       <div>
-                                            <a id="registerAccount" href="register.php">Create an account</a>
+                                       <div class="input-group">
+                                          <span class="fa fa-lock login-inputicon"></span>
+                                          <input type="repassword" id="repassword" placeholder="Repeat your password" required> 
                                        </div>
+                                       <div><a href="login.php">Already have an account?</a></div>
                                        <div id="hints" style="color:red"></div>
                                        <div class="login-btn-box">
-                                       	  <input type="button" name="signin" id="signin" class="btn btn-success" value="login Now"/>
+                                       	  <input type="button" name="register" id="register" class="btn btn-success" value="login Now"/>
                                        </div>
                                     </form>
                                  </div>
@@ -127,19 +129,24 @@
         $("#password").click(function () {
             $("#hints").html('');
         })
-        $("#signin").click(function () {
+        $("#repassword").click(function () {
+            $("#hints").html('');
+        })
+        $("#register").click(function () {
             var param = {
                 "username": $("#username").val(),
                 "password": $("#password").val(),
+                "repassword": $("#repassword").val()
             };
+            console.log(param);
 
             $.ajax({
-                url:"/student_entrepreneur_funding_system/dologin.php",
+                url:"/student_entrepreneur_funding_system/doregister.php",
                 data:param,
                 type:"POST",
                 dataType:"text",
                 success:function (data) {
-                    if (data.search('Login successfully') > -1){
+                    if (data.search('Register successfully') > -1){
                         window.location = 'index.php';
                     }else{
                         $("#hints").html(data);
