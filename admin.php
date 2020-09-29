@@ -12,7 +12,6 @@
     <title></title>
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css" >
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/backend-style.css">
 </head>
 
@@ -22,7 +21,7 @@
     <div id="main-wrapper">
 
         <header class="topbar">
-            <a class="userinfo" href=""><img src="img/headimg/1.png" class="profile-pic" />Markarn Doe</a>
+            <a class="userinfo" href=""><img src="img/headimg/1.png" class="profile-pic" />Kelvin</a>
         </header>
 
 
@@ -48,13 +47,7 @@
         </aside>
 
         <div class="page-wrapper">
-            <!-- ============================================================== -->
-            <!-- Container fluid  -->
-            <!-- ============================================================== -->
             <div class="container-fluid">
-                <!-- ============================================================== -->
-                <!-- Bread crumb and right sidebar toggle -->
-                <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 col-8 align-self-center">
                         <h3 class="text-themecolor m-b-0 m-t-0">Profile</h3>
@@ -80,7 +73,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Column -->
                     <!-- Column -->
                     <div class="col-lg-8 col-xlg-9 col-md-7">
                         <div class="card">
@@ -138,24 +130,18 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Column -->
                 </div>
-                <!-- Row -->
-                <!-- ============================================================== -->
-                <!-- End PAge Content -->
-                <!-- ============================================================== -->
             </div>
 
         </div>
     </div>
 
     <script src="assets/plugins/jquery/jquery.min.js"></script>
-    <!-- Bootstrap tether Core JavaScript -->
+    <!-- Bootstrap tether JavaScript -->
     <script src="assets/plugins/bootstrap/js/tether.min.js"></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 
     <script src="assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
-    <!--Custom JavaScript -->
     <script src="js/profile.js"></script>
 </body>
 
