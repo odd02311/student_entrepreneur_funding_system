@@ -26,11 +26,11 @@
 				Student Entrepreneur Funding System
 			</div>
 			<!-- MENU -->
-			<div class="row home-mega-menu ">
+			<div class="row ">
 				<div class="col-md-12">
 					<nav class="navbar navbar-default">
 
-						<div class="collapse navbar-collapse js-navbar-collapse megabg dropshd ">
+						<div class="collapse navbar-collapse js-navbar-collapse navbg ">
 							<ul class="nav navbar-nav">
 								<li><a href="index.php">Home</a></li>
 								<li>
@@ -64,7 +64,7 @@
 			<div class="row">
 				<!-- SIDEBAR -->
 				<div class="col-lg-2 col-md-4 hidden-sm hidden-xs">
-					<aside class="dark-bg">
+					<aside class="blue-bg">
 						<article>
 							<h2 class="icon"><i class="fa fa-gears" aria-hidden="true"></i>categories</h2>
 							<ul class="sidebar-links">

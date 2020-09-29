@@ -31,7 +31,7 @@
 				<div class="col-md-12">
 					<nav class="navbar navbar-default">
 
-						<div class="collapse navbar-collapse js-navbar-collapse megabg dropshd ">
+						<div class="collapse navbar-collapse js-navbar-collapse navbg ">
 							<ul class="nav navbar-nav">
 								<li><a href="index.php">Home</a></li>
 								<li>
