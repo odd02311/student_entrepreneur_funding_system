@@ -34,11 +34,11 @@
                     <ul id="sidebarnav">
                         <li> <a href="index.php" ><span>Home</span></a>
                         </li>
-                        <li class="active"> <a href="profile.html" aria-expanded="false"><span>Profile</span></a>
+                        <li class="active"> <a href="admin.php" aria-expanded="false"><span>Profile</span></a>
                         </li>
-                        <li> <a href="manage_posts.php"><span>Accounts</span></a>
+                        <li> <a href="admin_accounts.php"><span>Accounts</span></a>
                         </li>
-                        <li> <li> <a href="manage_posts.php"><span>Posts</span></a>
+                        <li> <li> <a href="admin_posts.php"><span>Posts</span></a>
                         </li>
                         <li> <li> <a href="logout.php"><span>Logout</span></a>
                         </li>
