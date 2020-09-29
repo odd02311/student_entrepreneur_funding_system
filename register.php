@@ -90,7 +90,7 @@
                                        </div>
                                        <div class="input-group">
                                           <span class="fa fa-lock login-inputicon"></span>
-                                          <input type="repassword" id="repassword" placeholder="Repeat your password" required> 
+                                          <input type="password" id="repassword" placeholder="Repeat your password" required> 
                                        </div>
                                        <div><a href="login.php">Already have an account?</a></div>
                                        <div id="hints" style="color:red"></div>

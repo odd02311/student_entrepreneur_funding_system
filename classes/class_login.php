@@ -48,6 +48,9 @@ class Login {
 
 				$_SESSION['id'] = $account['username'];
 				$_SESSION['admin'] = $account['is_admin'];
+				$_SESSION['phone'] = $account['phone'];
+				$_SESSION['school'] = $account['school'];
+				$_SESSION['email'] = $account['email'];
 
 				session_write_close();
 				return "Login successfully";

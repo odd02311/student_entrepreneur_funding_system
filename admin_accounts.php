@@ -68,47 +68,17 @@
                                         <thead>
                                             <tr>
                                                 <th>#</th>
-                                                <th>First Name</th>
-                                                <th>Last Name</th>
                                                 <th>Username</th>
+                                                <th>Email</th>
+                                                <th>Phone</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td>1</td>
-                                                <td>Deshmukh</td>
-                                                <td>Prohaska</td>
-                                                <td>@Genelia</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Deshmukh</td>
-                                                <td>Gaylord</td>
-                                                <td>@Ritesh</td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td>Sanghani</td>
-                                                <td>Gusikowski</td>
-                                                <td>@Govinda</td>
-                                            </tr>
-                                            <tr>
-                                                <td>4</td>
-                                                <td>Roshan</td>
-                                                <td>Rogahn</td>
-                                                <td>@Hritik</td>
-                                            </tr>
-                                            <tr>
-                                                <td>5</td>
-                                                <td>Joshi</td>
-                                                <td>Hickle</td>
-                                                <td>@Maruti</td>
-                                            </tr>
-                                            <tr>
-                                                <td>6</td>
-                                                <td>Nigam</td>
-                                                <td>Eichmann</td>
-                                                <td>@Sonu</td>
+                                                <td>2222222222</td>
+                                                <td>3333333333</td>
+                                                <td>4444444444</td>
                                             </tr>
                                         </tbody>
                                     </table>
