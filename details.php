@@ -116,11 +116,7 @@
                         <div class="video-content">
                            <h2 class="title main-head-title">Video Details</h2>
                            <p>
-<<<<<<< HEAD
                               It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-=======
-                              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
->>>>>>> develop
                            </p>
                         </div>
                      </article>
@@ -174,7 +170,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+
 
               <div class="col-sm-1">
                 <div class="thumbnail">
@@ -185,14 +181,14 @@
               <div class="col-sm-11">
                 <div class="panel panel-default">
                   <div class="panel-heading">
-                    <strong>Andy Lee</strong> <span class="pull-right">2020.7.4 11:00</span>
+                    <strong>Tony</strong> <span class="pull-right">2020.7.4 11:00</span>
                   </div>
                   <div class="panel-body">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                   </div>
                 </div>
               </div>
-            </div>
+
 
               <div class="col-sm-1">
                 <div class="thumbnail">
@@ -203,7 +199,7 @@
               <div class="col-sm-11">
                 <div class="panel panel-default">
                   <div class="panel-heading">
-                    <strong>Andy Lee</strong> <span class="pull-right">2020.7.4 11:00</span>
+                    <strong>Sun</strong> <span class="pull-right">2020.7.4 11:00</span>
                   </div>
                   <div class="panel-body">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
