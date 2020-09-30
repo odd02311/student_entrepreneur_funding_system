@@ -53,7 +53,6 @@ class Login {
 				$_SESSION['email'] = $account['email'];
 				$_SESSION['desc'] = $account['description'];
 
-				session_write_close();
 				return "Login successfully";
 
 			}else {

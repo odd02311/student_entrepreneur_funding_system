@@ -227,7 +227,7 @@ switch($act){
                 $query .= "email= '$email',";
             }
             if(!empty($desc)){
-                $query .= "desc= '$desc',";
+                $query .= "description= '$desc',";
             }
             if(!empty($school)){
                 $query .= "school= '$school',";
@@ -238,7 +238,8 @@ switch($act){
             }
             $query = trim ( $query, ',');
 
-            $query .= " WHERE id = '$id';";
+            $query .= " WHERE id = $id;";
+
             die($query);
             $res = mysqli_query ( $link, $query );
             if($res){

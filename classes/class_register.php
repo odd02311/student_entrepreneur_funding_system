@@ -57,11 +57,9 @@ class Register {
 
 		//Create INSERT query
 		$sql = "INSERT INTO accounts(username, password) VALUES('$username','".md5($password)."')";
-		$result = @mysqli_query($link, $sql);
-
+		$account = @mysqli_query($link, $sql);
 		//Check whether the query was successful or not
-		if($result) {
-			session_write_close();
+		if($account) {
 			return 'Register successfully';
 		}
 		return 'Query failed';
