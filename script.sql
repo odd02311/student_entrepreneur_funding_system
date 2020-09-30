@@ -16,7 +16,7 @@ is_admin INT UNSIGNED DEFAULT 0,
 email VARCHAR(40) DEFAULT NULL,
 phone VARCHAR(40) DEFAULT NULL,
 school VARCHAR(40) DEFAULT NULL,
-description VARCHAR(255) DEFAULT NULL,
+description VARCHAR(255) DEFAULT 'Do not have a description yet',
 headimg_url VARCHAR(255) DEFAULT "/img/headimg/0.png",
 create_date DATETIME DEFAULT CURRENT_TIMESTAMP()
 );

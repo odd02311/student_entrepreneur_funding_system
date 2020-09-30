@@ -80,9 +80,9 @@
                                     <div class="col-lg-4 col-md-4 m-t-20">
                                         <h3 class="m-b-0 font-light">99</h3><small>Articles</small></div>
                                     <div class="col-lg-4 col-md-4 m-t-20">
-                                        <h3 class="m-b-0 font-light">12,269</h3><small>Followers</small></div>
+                                        <h3 class="m-b-0 font-light">269</h3><small>Followers</small></div>
                                     <div class="col-lg-4 col-md-4 m-t-20">
-                                        <h3 class="m-b-0 font-light">6600</h3><small>Following</small></div>
+                                        <h3 class="m-b-0 font-light">66</h3><small>Following</small></div>
                                 </div>
                             </div>
                         </div>
@@ -173,7 +173,7 @@
                                             </div>
                                             <div class="col-md-3 col-xs-6 b-r"> <strong>Mobile</strong>
                                                 <br>
-                                                <p class="text-muted">
+                                                <p class="text-muted" id='phone-info'>
                                                     <?php
                                                         if(isset($_SESSION['phone'])) {
                                                             echo $_SESSION['phone'];
@@ -185,7 +185,7 @@
                                             </div>
                                             <div class="col-md-3 col-xs-6 b-r"> <strong>Email</strong>
                                                 <br>
-                                                <p class="text-muted">
+                                                <p class="text-muted" id='email-info'>
                                                     <?php
                                                         if(isset($_SESSION['email'])) {
                                                             echo $_SESSION['email'];
@@ -197,7 +197,15 @@
                                             </div>
                                             <div class="col-md-3 col-xs-6"> <strong>University</strong>
                                                 <br>
-                                                <p class="text-muted">NUS</p>
+                                                <p class="text-muted" id='school-info'>
+                                                    <?php
+                                                        if(isset($_SESSION['school'])) {
+                                                            echo  $_SESSION['school'];
+                                                        } else {
+                                                            echo '';
+                                                        } 
+                                                    ?>                   
+                                                </p>
                                             </div>
                                         </div>
                                         <hr>
@@ -227,12 +235,13 @@
                                                 <div class="col-md-12">
                                                     <input type="text" disabled placeholder=<?php
                                                     if(isset($_SESSION['id'])) {
-                                                        echo $_SESSION['id'];
+                                                        $text = $_SESSION['id'];
+                                                        echo "'$text'";
                                                     } else {
                                                         echo "''";
                                                     } 
                                                     ?>
-                                                    class="form-control form-control-line" id="id">
+                                                    class="form-control form-control-line" id="username">
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -247,7 +256,8 @@
                                                     <input type="text" placeholder=
                                                     <?php
                                                         if(isset($_SESSION['phone'])) {
-                                                            echo $_SESSION['phone'];
+                                                            $text = $_SESSION['phone'];
+                                                            echo "'$text'";
                                                         } else {
                                                             echo "''";
                                                         } 
@@ -260,7 +270,8 @@
                                                     <input type="email" placeholder=
                                                     <?php
                                                         if(isset($_SESSION['email'])) {
-                                                            echo $_SESSION['email'];
+                                                            $text = $_SESSION['email'];
+                                                            echo "'$text'";
                                                         } else {
                                                             echo "''";
                                                         } 
@@ -269,12 +280,13 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-md-12">Message</label>
+                                                <label class="col-md-12">Decription</label>
                                                 <div class="col-md-12">
                                                     <textarea rows="5" placeholder=
                                                     <?php
-                                                        if(isset($_SESSION['desc'])) {
-                                                            echo $_SESSION['desc'];
+                                                        if(isset($_SESSION['desc'])){
+                                                            $text = $_SESSION['desc'];
+                                                            echo "'$text'";
                                                         } else {
                                                             echo "''";
                                                         }
@@ -331,27 +343,25 @@
         })
         $("#update-profile").click(function () {
             var param = {
-                "act": 'update',
-                "username": <?php echo $_SESSION['id']; ?> , 
+                "act": 'update_account',
                 "password": $("#password").val(),
                 "phone": $("#phone").val(),
                 "email": $("#email").val(),
                 "desc": $("#desc").val(),
                 "school": $("#school").val()
             };
-
-
             $.ajax({
-                url:"/student_entrepreneur_funding_system/dologin.php",
+                url:"/student_entrepreneur_funding_system/doaction.php",
                 data:param,
                 type:"POST",
                 dataType:"text",
                 success:function (data) {
-                    if (data.search('Login successfully') > -1){
-                        window.location = 'index.php';
-                    }else{
-                        $("#hints").html(data);
-                    }
+                     if (data.search('Update successfully') > -1){
+                            $("#phone-info").html($("#phone").val());
+                            $("#email-info").html($("#email").val());
+                            $("#school-info").html($("#school").val());
+                     }
+                    $("#hints").html(data);
                 }
             })
         })

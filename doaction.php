@@ -212,20 +212,28 @@ switch($act){
             }
         break;
     case 'update_account':
-            $product_id=$_REQUEST['product_id'];
 
-            $product_id=$_REQUEST['product_id'];
-            $product_id=$_REQUEST['product_id'];
-            $product_id=$_REQUEST['product_id'];
-            $product_id=$_REQUEST['product_id'];
+            $phone=(!empty($_REQUEST['phone'])) ? $_REQUEST['phone'] : 'phone';
+            $email=(!empty($_REQUEST['email'])) ? $_REQUEST['email'] : 'email';
+            $desc=(!empty($_REQUEST['desc'])) ? $_REQUEST['desc'] : 'description';
+            $school=(!empty($_REQUEST['school'])) ? $_REQUEST['school']: 'school';
+            $password=(!empty($_REQUEST['password'])) ? $_REQUEST['password'] : 'password';
 
-            $query = "UPDATE accounts SET views = views +1 WHERE product_id = " .$product_id;
+            $query = "UPDATE accounts SET email = '$email', description = '$desc', school = '$school', 
+                      phone = '$phone', password = '$password' WHERE username = '$id'";
+
             $res = mysqli_query ( $link, $query );
             if($res){
-                echo '1';
+
+                $_SESSION['phone'] = $phone;
+                $_SESSION['school'] = $school;
+                $_SESSION['email'] = $email;
+                $_SESSION['desc'] = $desc;
+
+                echo 'Update successfully';
             }
             else{
-                echo '0';
+                echo 'Update failed';
             }
         break;
     case 'del':
