@@ -209,8 +209,16 @@
                                             </div>
                                         </div>
                                         <hr>
-                                        <p class="m-t-30">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries </p>
+                                        <p class="m-t-30" id='desc-info'>
+                                            <?php
+                                                if(isset($_SESSION['desc'])) {
+                                                    $text = $_SESSION['desc'];
+                                                    echo  "$text";
+                                                } else {
+                                                    echo "";
+                                                } 
+                                            ?> 
+                                        </p>
                                         <h4 class="font-medium m-t-30">Skill Set</h4>
                                         <hr>
                                         <h5 class="m-t-30">PHP <span class="pull-right">80%</span></h5>
@@ -360,6 +368,7 @@
                             $("#phone-info").html($("#phone").val());
                             $("#email-info").html($("#email").val());
                             $("#school-info").html($("#school").val());
+                            $("#desc-info").html($("#desc").val());
                      }
                     $("#hints").html(data);
                 }

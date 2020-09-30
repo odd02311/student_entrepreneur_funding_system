@@ -217,10 +217,12 @@ switch($act){
             $email=(!empty($_REQUEST['email'])) ? $_REQUEST['email'] : 'email';
             $desc=(!empty($_REQUEST['desc'])) ? $_REQUEST['desc'] : 'description';
             $school=(!empty($_REQUEST['school'])) ? $_REQUEST['school']: 'school';
-            $password=(!empty($_REQUEST['password'])) ? $_REQUEST['password'] : 'password';
+
+            $encrypted_pwd = md5($_REQUEST['password']);
+            $password=(!empty($_REQUEST['password'])) ? '\'' .$encrypted_pwd .'\'' : 'password';
 
             $query = "UPDATE accounts SET email = '$email', description = '$desc', school = '$school', 
-                      phone = '$phone', password = '$password' WHERE username = '$id'";
+                      phone = '$phone', password = $password WHERE username = '$id'";
 
             $res = mysqli_query ( $link, $query );
             if($res){
