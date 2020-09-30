@@ -365,10 +365,19 @@
                 dataType:"text",
                 success:function (data) {
                      if (data.search('Update successfully') > -1){
-                            $("#phone-info").html($("#phone").val());
-                            $("#email-info").html($("#email").val());
-                            $("#school-info").html($("#school").val());
-                            $("#desc-info").html($("#desc").val());
+                            if ($("#phone").val() != ''){
+                                $("#phone-info").html($("#phone").val());
+                            }
+                            if ($("#email").val() != ''){
+                                $("#email-info").html($("#email").val());
+                            }
+                            if ($("#school").val() != ''){
+                                $("#school-info").html($("#school").val());
+                            }
+                            if ($("#desc").val() != ''){
+                                $("#desc-info").html($("#desc").val());
+                            }
+
                      }
                     $("#hints").html(data);
                 }

@@ -79,7 +79,7 @@
 				<!-- HOME MAIN POSTS -->
 				<div class="col-lg-10 col-md-8">
 					<section id="home-main">
-						<h2 class="icon"><i class="fa fa-television" aria-hidden="true"></i>popular productions</h2>
+						<h2 class="icon"><i class="fa fa-television" aria-hidden="true"></i>latest productions</h2>
 						<div class="row">
 							<!-- ARTICLES -->
 							<div class="col-lg-9 col-md-12 col-sm-12">
@@ -235,7 +235,7 @@
 				<div class="col-lg-1 col-md-2"> </div>
 				<div class="col-lg-10 col-md-8">
 					<!-- BOOTSTRAP TABS -->
-					<h2 class="title">latest</h2>
+					<h2 class="title">Popular</h2>
 					<div class="row auto-clear">
 						<!-- TAB CONTENTS -->
 

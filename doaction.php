@@ -240,14 +240,22 @@ switch($act){
 
             $query .= " WHERE id = $id;";
 
-            die($query);
+            
             $res = mysqli_query ( $link, $query );
             if($res){
 
-                $_SESSION['phone'] = $phone;
-                $_SESSION['school'] = $school;
-                $_SESSION['email'] = $email;
-                $_SESSION['desc'] = $desc;
+                if(!empty($phone)){
+                    $_SESSION['phone'] = $phone;
+                }
+                if(!empty($email)){
+                    $_SESSION['email'] = $email;
+                }
+                if(!empty($desc)){
+                    $_SESSION['desc'] = $desc;
+                }
+                if(!empty($school)){
+                    $_SESSION['school'] = $school;
+                }
 
                 echo 'Update successfully';
             }
