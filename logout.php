@@ -10,6 +10,7 @@
 	unset($_SESSION['phone']);
 	unset($_SESSION['school']);
 	unset($_SESSION['email']);
+	unset($_SESSION['desc']);
 
 	session_write_close();
 	header("location: ".HOMEURL);

@@ -1,3 +1,8 @@
+<?php
+    include dirname(__FILE__) .'./common.php';
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,7 +32,15 @@
     <div id="main-wrapper">
 
         <header class="topbar">
-            <a class="userinfo" href=""><img src="img/headimg/1.png" class="profile-pic" />Kelvin</a>
+            <a class="userinfo" href=""><img src="img/headimg/1.png" class="profile-pic" />
+                <?php
+                    if(isset($_SESSION['id'])) {
+                        echo $_SESSION['id'];
+                    } else {
+                        echo '';
+                    } 
+                ?>
+            </a>
         </header>
 
         <aside class="left-sidebar">
@@ -148,15 +161,39 @@
                                         <div class="row">
                                             <div class="col-md-3 col-xs-6 b-r"> <strong>Full Name</strong>
                                                 <br>
-                                                <p class="text-muted">Kelvin</p>
+                                                <p class="text-muted">
+                                                    <?php
+                                                        if(isset($_SESSION['id'])) {
+                                                            echo $_SESSION['id'];
+                                                        } else {
+                                                            echo '';
+                                                        } 
+                                                    ?>
+                                                </p>
                                             </div>
                                             <div class="col-md-3 col-xs-6 b-r"> <strong>Mobile</strong>
                                                 <br>
-                                                <p class="text-muted">(123) 456 7890</p>
+                                                <p class="text-muted">
+                                                    <?php
+                                                        if(isset($_SESSION['phone'])) {
+                                                            echo $_SESSION['phone'];
+                                                        } else {
+                                                            echo '';
+                                                        } 
+                                                    ?>
+                                                </p>
                                             </div>
                                             <div class="col-md-3 col-xs-6 b-r"> <strong>Email</strong>
                                                 <br>
-                                                <p class="text-muted">Kelvin@gmail.com</p>
+                                                <p class="text-muted">
+                                                    <?php
+                                                        if(isset($_SESSION['email'])) {
+                                                            echo $_SESSION['email'];
+                                                        } else {
+                                                            echo '';
+                                                        } 
+                                                    ?>
+                                                </p>
                                             </div>
                                             <div class="col-md-3 col-xs-6"> <strong>University</strong>
                                                 <br>
@@ -168,7 +205,7 @@
                                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries </p>
                                         <h4 class="font-medium m-t-30">Skill Set</h4>
                                         <hr>
-                                        <h5 class="m-t-30">Wordpress <span class="pull-right">80%</span></h5>
+                                        <h5 class="m-t-30">PHP <span class="pull-right">80%</span></h5>
                                         <div class="progress">
                                             <div class="progress-bar bg-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%; height:6px;"> <span class="sr-only">50% Complete</span> </div>
                                         </div>
@@ -180,10 +217,6 @@
                                         <div class="progress">
                                             <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%; height:6px;"> <span class="sr-only">50% Complete</span> </div>
                                         </div>
-                                        <h5 class="m-t-30">Photoshop <span class="pull-right">70%</span></h5>
-                                        <div class="progress">
-                                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%; height:6px;"> <span class="sr-only">50% Complete</span> </div>
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="tab-pane" id="settings" role="tabpanel">
@@ -192,37 +225,67 @@
                                             <div class="form-group">
                                                 <label class="col-md-12">Full Name</label>
                                                 <div class="col-md-12">
-                                                    <input type="text" placeholder="Kelvin" class="form-control form-control-line">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="example-email" class="col-md-12">Email</label>
-                                                <div class="col-md-12">
-                                                    <input type="email" placeholder="kelvin@gmail.com" class="form-control form-control-line" name="example-email" id="example-email">
+                                                    <input type="text" disabled placeholder=<?php
+                                                    if(isset($_SESSION['id'])) {
+                                                        echo $_SESSION['id'];
+                                                    } else {
+                                                        echo "''";
+                                                    } 
+                                                    ?>
+                                                    class="form-control form-control-line" id="id">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="col-md-12">Password</label>
                                                 <div class="col-md-12">
-                                                    <input type="password" class="form-control form-control-line">
+                                                    <input type="password" class="form-control form-control-line" id="password">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="col-md-12">Phone No</label>
                                                 <div class="col-md-12">
-                                                    <input type="text" placeholder="123 456 7890" class="form-control form-control-line">
+                                                    <input type="text" placeholder=
+                                                    <?php
+                                                        if(isset($_SESSION['phone'])) {
+                                                            echo $_SESSION['phone'];
+                                                        } else {
+                                                            echo "''";
+                                                        } 
+                                                    ?> class="form-control form-control-line" id="phone">
+                                                </div>
+                                            </div>
+                                           <div class="form-group">
+                                                <label for="example-email" class="col-md-12">Email</label>
+                                                <div class="col-md-12">
+                                                    <input type="email" placeholder=
+                                                    <?php
+                                                        if(isset($_SESSION['email'])) {
+                                                            echo $_SESSION['email'];
+                                                        } else {
+                                                            echo "''";
+                                                        } 
+                                                    ?>
+                                                     class="form-control form-control-line" name="example-email" id="email">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="col-md-12">Message</label>
                                                 <div class="col-md-12">
-                                                    <textarea rows="5" class="form-control form-control-line"></textarea>
+                                                    <textarea rows="5" placeholder=
+                                                    <?php
+                                                        if(isset($_SESSION['desc'])) {
+                                                            echo $_SESSION['desc'];
+                                                        } else {
+                                                            echo "''";
+                                                        }
+                                                    ?> 
+                                                    class="form-control form-control-line" id="desc"></textarea>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="col-sm-12">Select your University</label>
                                                 <div class="col-sm-12">
-                                                    <select class="form-control form-control-line">
+                                                    <select class="form-control form-control-line" id="school">
                                                         <option>National University of Singapore</option>
                                                         <option>Nanyang Technological University</option>
                                                         <option>NUS Business School</option>
@@ -232,8 +295,9 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
+                                                <div id="hints" style="color:red"></div>
                                                 <div class="col-sm-12">
-                                                    <button class="btn btn-success">Update Profile</button>
+                                                    <input type="button" name="update-profile" id="update-profile" class="btn btn-success" value="Update Profile"/>
                                                 </div>
                                             </div>
                                         </form>
@@ -250,5 +314,49 @@
     </div>
 
 </body>
+
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+    <script>
+        $("#password").click(function () {
+            $("#hints").html('');
+        })
+        $("#email").click(function () {
+            $("#hints").html('');
+        })
+        $("#desc").click(function () {
+            $("#hints").html('');
+        })
+        $("#phone").click(function () {
+            $("#hints").html('');
+        })
+        $("#update-profile").click(function () {
+            var param = {
+                "act": 'update',
+                "username": <?php echo $_SESSION['id']; ?> , 
+                "password": $("#password").val(),
+                "phone": $("#phone").val(),
+                "email": $("#email").val(),
+                "desc": $("#desc").val(),
+                "school": $("#school").val()
+            };
+
+
+            $.ajax({
+                url:"/student_entrepreneur_funding_system/dologin.php",
+                data:param,
+                type:"POST",
+                dataType:"text",
+                success:function (data) {
+                    if (data.search('Login successfully') > -1){
+                        window.location = 'index.php';
+                    }else{
+                        $("#hints").html(data);
+                    }
+                }
+            })
+        })
+    </script>
+
+
 
 </html>

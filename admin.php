@@ -142,7 +142,7 @@
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 
     <script src="assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
-    <script src="js/profile.js"></script>
+
 </body>
 
 </html>

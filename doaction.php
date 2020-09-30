@@ -211,6 +211,23 @@ switch($act){
                 echo 'Post failed';
             }
         break;
+    case 'update_account':
+            $product_id=$_REQUEST['product_id'];
+
+            $product_id=$_REQUEST['product_id'];
+            $product_id=$_REQUEST['product_id'];
+            $product_id=$_REQUEST['product_id'];
+            $product_id=$_REQUEST['product_id'];
+
+            $query = "UPDATE accounts SET views = views +1 WHERE product_id = " .$product_id;
+            $res = mysqli_query ( $link, $query );
+            if($res){
+                echo '1';
+            }
+            else{
+                echo '0';
+            }
+        break;
     case 'del':
             $res = delete($link, $table,"id = ".$id);
             if($res){
