@@ -244,7 +244,7 @@
                                                     <input type="text" disabled placeholder=<?php
                                                     if(isset($_SESSION['id'])) {
                                                         $text = $_SESSION['id'];
-                                                        echo "'$text'";
+                                                        echo $_SESSION['id'];
                                                     } else {
                                                         echo "''";
                                                     } 
@@ -264,8 +264,7 @@
                                                     <input type="text" placeholder=
                                                     <?php
                                                         if(isset($_SESSION['phone'])) {
-                                                            $text = $_SESSION['phone'];
-                                                            echo "'$text'";
+                                                            echo $_SESSION['phone'];
                                                         } else {
                                                             echo "''";
                                                         } 
@@ -278,8 +277,7 @@
                                                     <input type="email" placeholder=
                                                     <?php
                                                         if(isset($_SESSION['email'])) {
-                                                            $text = $_SESSION['email'];
-                                                            echo "'$text'";
+                                                            echo $_SESSION['email'];
                                                         } else {
                                                             echo "''";
                                                         } 
@@ -293,8 +291,7 @@
                                                     <textarea rows="5" placeholder=
                                                     <?php
                                                         if(isset($_SESSION['desc'])){
-                                                            $text = $_SESSION['desc'];
-                                                            echo "'$text'";
+                                                            echo $_SESSION['desc'];
                                                         } else {
                                                             echo "''";
                                                         }
