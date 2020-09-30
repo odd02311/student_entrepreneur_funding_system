@@ -12,8 +12,8 @@
 		       	(trim($_SESSION['admin']) == 1));
 	}
 
-	function getUserID()
+	function getUserName()
 	{
-		return trim($_SESSION['id']);
+		return trim($_SESSION['username']);
 	}
 ?>

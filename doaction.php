@@ -163,7 +163,8 @@ if (!isset($_REQUEST['act'])){
 
 $link = connect();
 $act=$_REQUEST['act'];
-$id = trim($_SESSION['id']);
+$id = $_SESSION['id'];
+$username = trim($_SESSION['username']);
 
 switch($act){
     case 'like':
@@ -194,7 +195,7 @@ switch($act){
             $likes = 0;
             $views = 0;
             $dislikes = 0;
-            $username = $id;
+            $username = $username;
             $title = $_REQUEST["title"];
             $author = $_REQUEST["author"];
             $category = $_REQUEST["category"];
@@ -213,16 +214,31 @@ switch($act){
         break;
     case 'update_account':
 
-            $phone=(!empty($_REQUEST['phone'])) ? '\'' .$_REQUEST['phone'].'\'' : 'phone';
-            $email=(!empty($_REQUEST['email'])) ? '\'' .$_REQUEST['email'].'\'' : 'email';
-            $desc=(!empty($_REQUEST['desc'])) ? '\'' .$_REQUEST['desc'].'\'' : 'description';
-            $school=(!empty($_REQUEST['school'])) ? '\'' .$_REQUEST['school'].'\'' : 'school';
+            $phone = $_REQUEST['phone'];
+            $email = $_REQUEST['email'];
+            $desc = $_REQUEST['desc'];
+            $school = $_REQUEST['school'];
 
-            $encrypted_pwd = md5($_REQUEST['password']);
-            $password=(!empty($_REQUEST['password'])) ? '\'' .$encrypted_pwd .'\'' : 'password';
+            $query = "UPDATE accounts SET ";
+            if(!empty($phone)){
+                $query .= "phone= '$phone',";
+            }
+            if(!empty($email)){
+                $query .= "email= '$email',";
+            }
+            if(!empty($desc)){
+                $query .= "desc= '$desc',";
+            }
+            if(!empty($school)){
+                $query .= "school= '$school',";
+            }
+            if(!empty($_REQUEST['password'])){
+                $encrypted_pwd = md5($_REQUEST['password']);
+                $query .= "password='$encrypted_pwd',";
+            }
+            $query = trim ( $query, ',');
 
-            $query = "UPDATE accounts SET email = $email, description = $desc, school = $school, 
-                      phone = $phone, password = $password WHERE username = $id";
+            $query .= " WHERE id = '$id';";
             die($query);
             $res = mysqli_query ( $link, $query );
             if($res){
@@ -237,6 +253,7 @@ switch($act){
             else{
                 echo 'Update failed';
             }
+
         break;
     case 'del':
             $res = delete($link, $table,"id = ".$id);
@@ -267,7 +284,7 @@ switch($act){
             }
         break;
     case 'mylist':
-            $query = "select * from productions where username = " .$id;
+            $query = "select * from productions where username = " .$username;
             $rows = fetchAll($link, $query);
             if($rows){
                 return json_encode($rows);

@@ -89,8 +89,8 @@
                                         <label class="col-md-12">Full Name</label>
                                         <div class="col-md-12">
                                             <input type="text" disabled placeholder=<?php
-                                            if(isset($_SESSION['id'])) {
-                                                $text = $_SESSION['id'];
+                                            if(isset($_SESSION['username'])) {
+                                                $text = $_SESSION['username'];
                                                 echo "'$text'";
                                             } else {
                                                 echo "''";

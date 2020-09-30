@@ -11,7 +11,10 @@
 	$reg = new Register;
 	$response = $reg->register($username, $password, $repassword);
 	// if($response == "Register successfully") {
-	// 	header("location: login.php?username=".$username."&password=".$password);
+
+	//  	header("Location:login.php?username=".$username."&password=".$password);
+	// }else{
+		
 	// }
 	echo $response;
 	//header("location: error.php");

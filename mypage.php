@@ -34,8 +34,8 @@
         <header class="topbar">
             <a class="userinfo" href=""><img src="img/headimg/1.png" class="profile-pic" />
                 <?php
-                    if(isset($_SESSION['id'])) {
-                        echo $_SESSION['id'];
+                    if(isset($_SESSION['username'])) {
+                        echo $_SESSION['username'];
                     } else {
                         echo '';
                     } 
@@ -163,8 +163,8 @@
                                                 <br>
                                                 <p class="text-muted">
                                                     <?php
-                                                        if(isset($_SESSION['id'])) {
-                                                            echo $_SESSION['id'];
+                                                        if(isset($_SESSION['username'])) {
+                                                            echo $_SESSION['username'];
                                                         } else {
                                                             echo '';
                                                         } 
@@ -242,9 +242,9 @@
                                                 <label class="col-md-12">Full Name</label>
                                                 <div class="col-md-12">
                                                     <input type="text" disabled placeholder=<?php
-                                                    if(isset($_SESSION['id'])) {
-                                                        $text = $_SESSION['id'];
-                                                        echo $_SESSION['id'];
+                                                    if(isset($_SESSION['username'])) {
+                                                        $text = $_SESSION['username'];
+                                                        echo $_SESSION['username'];
                                                     } else {
                                                         echo "''";
                                                     } 
@@ -282,7 +282,7 @@
                                                             echo "''";
                                                         } 
                                                     ?>
-                                                     class="form-control form-control-line" name="example-email" id="email">
+                                                     class="form-control form-control-line" name="email" id="email">
                                                 </div>
                                             </div>
                                             <div class="form-group">

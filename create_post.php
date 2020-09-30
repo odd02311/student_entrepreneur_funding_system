@@ -35,8 +35,8 @@
         <header class="topbar">
             <i><img src="img/headimg/1.png" class="profile-pic" />
                 <?php
-                    if(isset($_SESSION['id'])) {
-                        echo $_SESSION['id'];
+                    if(isset($_SESSION['username'])) {
+                        echo $_SESSION['username'];
                     } else {
                         echo '';
                     } 
