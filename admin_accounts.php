@@ -1,3 +1,9 @@
+
+<?php
+session_start();
+require_once dirname(__FILE__) .'/common.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -71,15 +77,32 @@
                                                 <th>Username</th>
                                                 <th>Email</th>
                                                 <th>Phone</th>
+                                                <th>School</th>
+                                                <th>Create Time</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>1</td>
-                                                <td>2222222222</td>
-                                                <td>3333333333</td>
-                                                <td>4444444444</td>
+ 
+                                        <?php
+                                                    $index=0;
+                                                    $rows = getAllUsers();
+                                                    foreach ($rows as $row){
+                                                        $index+=1;
+                                        ?>
+                                                <td>
+                                                    <?php echo $index; ?>
+                                                </td>
+
+                                                <td><?php echo $row['username']; ?></td>
+                                                <td><?php echo $row['email']; ?></td>
+                                                <td><?php echo $row['phone']; ?></td>
+                                                <td><?php echo $row['school']; ?></td>
+                                                <td><?php echo $row['create_date']; ?></td>
                                             </tr>
+
+                                        <?php } ?>
+
                                         </tbody>
                                     </table>
                                 </div>
@@ -97,7 +120,7 @@
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 
     <script src="assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
-    <script src="js/profile.js"></script>
+
 </body>
 
 </html>

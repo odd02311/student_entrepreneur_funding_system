@@ -8,7 +8,7 @@ $(function() {
 
         } else {
             $("body").removeClass("mini-sidebar");
-            $("left-sidebar").hide();
+
         }
     };
     $(window).ready(set);
@@ -22,7 +22,7 @@ $(function() {
     // listen click event when open navigation in mobile view
     $(".body").click(function() {
         $("body").removeClass("mini-sidebar");
-        $("left-sidebar").hide();
+        // $("left-sidebar").hide();
     });
 
     $("body").trigger("resize");

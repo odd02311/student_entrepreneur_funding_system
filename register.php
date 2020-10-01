@@ -39,9 +39,9 @@
 			                            //determines whether user logged in
 			                            if (isLoggedIn()){
 			                            	if (isAdmin()){
-			                            		echo '<a href="admin.php">' .getUserID() .'</a>';
+			                            		echo '<a href="admin.php">' .getUserName() .'</a>';
 			                                } else {
-			                                	echo '<a href="mypage.php">' .getUserID() .'</a>';
+			                                	echo '<a href="mypage.php">' .getUserName() .'</a>';
 			                                }
 			                            } else {
 			                            	echo '<a id="loginLink" href="login.php">Login/SignUp</a>';

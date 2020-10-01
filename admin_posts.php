@@ -1,3 +1,10 @@
+
+<?php
+session_start();
+require_once dirname(__FILE__) .'/common.php';
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -70,21 +77,36 @@
                                         <thead>
                                             <tr>
                                                 <th>#</th>
-                                                <th>Title</th>
-                                                <th>Category</th>
                                                 <th>Username</th>
-                                                <th>Created Time</th>
+                                                <th>Category</th>
+                                                <th>Title</th>
+                                                <th>Author</th>
+                                                <th>Create Time</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>1</td>
-                                                <td>222222222</td>
-                                                <td>3333333333</td>
-                                                <td>44444444</td>
-                                                <td>555555555</td>
+ 
+                                        <?php
+                                                    $index=0;
+                                                    $rows = getAllPosts();
+                                                    foreach ($rows as $row){
+                                                        $index+=1;
+                                        ?>
+                                                <td>
+                                                    <?php echo $index; ?>
+                                                </td>
+                                                <td><?php echo $row['username']; ?></td>
+                                                <td><?php echo $row['category']; ?></td>
+                                                <td><?php echo $row['title']; ?></td>
+                                                <td><?php echo $row['author']; ?></td>
+                                                <td><?php echo $row['create_date']; ?></td>
                                             </tr>
+
+                                        <?php } ?>
+
                                         </tbody>
+
                                     </table>
                                 </div>
                             </div>
@@ -101,7 +123,7 @@
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 
     <script src="assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
-    <script src="js/profile.js"></script>
+
 </body>
 
 </html>

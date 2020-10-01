@@ -45,14 +45,14 @@ class Login {
 				//session_regenerate_id();
 				$account = mysqli_fetch_assoc($result);
 
-
-				$_SESSION['id'] = $account['username'];
+				$_SESSION['id'] = $account['id'];
+				$_SESSION['username'] = $account['username'];
 				$_SESSION['admin'] = $account['is_admin'];
 				$_SESSION['phone'] = $account['phone'];
 				$_SESSION['school'] = $account['school'];
 				$_SESSION['email'] = $account['email'];
+				$_SESSION['desc'] = $account['description'];
 
-				session_write_close();
 				return "Login successfully";
 
 			}else {

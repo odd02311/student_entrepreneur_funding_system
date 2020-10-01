@@ -1,3 +1,9 @@
+<?php
+    include dirname(__FILE__) .'./common.php';
+    session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -78,52 +84,87 @@
                         <div class="card">
                             <div class="card-block">
                                 <form class="form-horizontal">
+
                                     <div class="form-group">
                                         <label class="col-md-12">Full Name</label>
                                         <div class="col-md-12">
-                                            <input type="text" placeholder="username" class="form-control form-control-line">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="example-email" class="col-md-12">Email</label>
-                                        <div class="col-md-12">
-                                            <input type="email" placeholder="your@email.com" class="form-control form-control-line" name="example-email" id="example-email">
+                                            <input type="text" disabled placeholder=<?php
+                                            if(isset($_SESSION['username'])) {
+                                                $text = $_SESSION['username'];
+                                                echo "'$text'";
+                                            } else {
+                                                echo "''";
+                                            } 
+                                            ?>
+                                            class="form-control form-control-line" id="username">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-md-12">Password</label>
                                         <div class="col-md-12">
-                                            <input type="password" placeholder="password" class="form-control form-control-line">
+                                            <input type="password" class="form-control form-control-line" id="password">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-md-12">Phone No</label>
                                         <div class="col-md-12">
-                                            <input type="text" placeholder="123 456 7890" class="form-control form-control-line">
+                                            <input type="text" placeholder=
+                                            <?php
+                                                if(isset($_SESSION['phone'])) {
+                                                    $text = $_SESSION['phone'];
+                                                    echo "'$text'";
+                                                } else {
+                                                    echo "''";
+                                                } 
+                                            ?> class="form-control form-control-line" id="phone">
+                                        </div>
+                                    </div>
+                                   <div class="form-group">
+                                        <label for="example-email" class="col-md-12">Email</label>
+                                        <div class="col-md-12">
+                                            <input type="email" placeholder=
+                                            <?php
+                                                if(isset($_SESSION['email'])) {
+                                                    $text = $_SESSION['email'];
+                                                    echo "'$text'";
+                                                } else {
+                                                    echo "''";
+                                                } 
+                                            ?>
+                                             class="form-control form-control-line" name="example-email" id="email">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-md-12">Message</label>
+                                        <label class="col-md-12">Decription</label>
                                         <div class="col-md-12">
-                                            <textarea rows="5" class="form-control form-control-line"></textarea>
+                                            <textarea rows="5" placeholder=
+                                            <?php
+                                                if(isset($_SESSION['desc'])){
+                                                    $text = $_SESSION['desc'];
+                                                    echo "'$text'";
+                                                } else {
+                                                    echo "''";
+                                                }
+                                            ?> 
+                                            class="form-control form-control-line" id="desc"></textarea>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-sm-12">Select your University</label>
                                         <div class="col-sm-12">
-                                            <select class="form-control form-control-line">
-                                                        <option>National University of Singapore</option>
-                                                        <option>Nanyang Technological University</option>
-                                                        <option>NUS Business School</option>
-                                                        <option>Singapore Management University</option>
-                                                        <option>James Cook University Singapore</option>
+                                            <select class="form-control form-control-line" id="school">
+                                                <option>National University of Singapore</option>
+                                                <option>Nanyang Technological University</option>
+                                                <option>NUS Business School</option>
+                                                <option>Singapore Management University</option>
+                                                <option>James Cook University Singapore</option>
                                             </select>
-
                                         </div>
                                     </div>
                                     <div class="form-group">
+                                        <div id="hints" style="color:red"></div>
                                         <div class="col-sm-12">
-                                            <button class="btn btn-success">Update Profile</button>
+                                            <input type="button" name="update-profile" id="update-profile" class="btn btn-success" value="Update Profile"/>
                                         </div>
                                     </div>
                                 </form>
@@ -142,7 +183,58 @@
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 
     <script src="assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
-    <script src="js/profile.js"></script>
+
+    <script>
+        $("#password").click(function () {
+            $("#hints").html('');
+        })
+        $("#email").click(function () {
+            $("#hints").html('');
+        })
+        $("#desc").click(function () {
+            $("#hints").html('');
+        })
+        $("#phone").click(function () {
+            $("#hints").html('');
+        })
+        $("#update-profile").click(function () {
+            var param = {
+                "act": 'update_account',
+                "password": $("#password").val(),
+                "phone": $("#phone").val(),
+                "email": $("#email").val(),
+                "desc": $("#desc").val(),
+                "school": $("#school").val()
+            };
+            $.ajax({
+                url:"/student_entrepreneur_funding_system/doaction.php",
+                data:param,
+                type:"POST",
+                dataType:"text",
+                success:function (data) {
+                     if (data.search('Update successfully') > -1){
+                            if ($("#phone").val() != ''){
+                                $("#phone-info").html($("#phone").val());
+                            }
+                            if ($("#email").val() != ''){
+                                $("#email-info").html($("#email").val());
+                            }
+                            if ($("#school").val() != ''){
+                                $("#school-info").html($("#school").val());
+                            }
+                            if ($("#desc").val() != ''){
+                                $("#desc-info").html($("#desc").val());
+                            }
+
+                     }
+                    $("#hints").html(data);
+                }
+            })
+        })
+    </script>
+
+
+
 </body>
 
 </html>
