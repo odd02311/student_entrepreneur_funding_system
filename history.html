@@ -1,0 +1,292 @@
+<!DOCTYPE html> 
+ 
+<html lang="en"> 
+<head> 
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <!-- Tell the browser to be responsive to screen width --> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta name="description" content=""> 
+    <meta name="author" content=""> 
+ 
+    <title></title> 
+    <!-- Bootstrap Core CSS --> 
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css" > 
+    <!-- Custom CSS --> 
+    <link rel="stylesheet" href="css/backend-style.css"> 
+</head> 
+<body class="fix-header fix-sidebar card-no-border"> 
+    <div id="main-wrapper"> 
+        <header class="topbar"> 
+            <a class="userinfo" href=""><img src="img/headimg/1.png" class="profile-pic" />Markarn Doe</a> 
+        </header> 
+        <aside class="left-sidebar"> 
+            <!-- Sidebar scroll--> 
+            <div class="scroll-sidebar"> 
+                <!-- Sidebar navigation--> 
+                <nav class="sidebar-nav"> 
+                    <ul id="sidebarnav"> 
+                        <li> <a href="index.php" ><span>Home</span></a> 
+                        </li> 
+                        <li class=""> <a href="profile.html" aria-expanded="false"><span>Profile</span></a> 
+                        </li> 
+                        <li> <a href="manage_posts.php"><span>Accounts</span></a> 
+                        </li> 
+                        <li> <li> <a href="manage_posts.php"><span>Posts</span></a> 
+                        </li> 
+                        <li> <li> <a href="logout.php"><span>Logout</span></a> 
+                        </li> 
+                    </ul> 
+                </nav> 
+            </div> 
+        </aside> 
+ 
+        <div class="page-wrapper"> 
+            <!-- ============================================================== --> 
+            <!-- Container fluid  --> 
+            <!-- ============================================================== --> 
+            <div class="container-fluid"> 
+                <!-- ============================================================== --> 
+                <!-- Bread crumb and right sidebar toggle --> 
+                <!-- ============================================================== --> 
+                <div class="row page-titles"> 
+                    <div class="col-md-5 col-8 align-self-center"> 
+                        <h3 class="text-themecolor m-b-0 m-t-0">History</h3> 
+                        <ol class="breadcrumb"> 
+                            <li class="breadcrumb-item"><a href="index.php">Home</a></li> 
+                            <li class="breadcrumb-item active"> History</li> 
+                        </ol> 
+                    </div> 
+                </div> 
+ 
+                <!-- ============================================================== -->
+                <!-- Operation Report Contents  -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <table class="table table-hover table-bordered">
+                        <thead>
+                            <tr class="table-active">
+                                <th scope="col">No.</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Category</th>
+                                <th scope="col">Username</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Delete</th>
+                            </tr>    
+                        </thead>
+                        
+                        <tbody>
+                            <tr class="table-danger">
+                                <th scope="row">1</th>
+                                <td>2-9-2020</td>
+                                <td>Sponsor</td>
+                                <td>Haris Anika</td>
+                                <td>Sponsored $50 to Hope Project through patreon.</td>  
+                                <td>
+                                    <div class="col-md-12 text-center">
+                                        <input type="checkbox" class="form-check-input" id="delete_checkbox1">
+                                    </div>
+                                </td>                    
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">2</th>
+                                <td>3-Sep-20</td>
+                                <td>Sponsor</td>
+                                <td>Agnes Cole</td>
+                                <td>Sponsored $35 to Cancer Free Project through paypal.</td> 
+                                <td>
+                                    <div class="col-md-12 text-center">
+                                        <input type="checkbox" class="form-check-input" id="delete_checkbox1">
+                                    </div>
+                                </td>                                  
+                            </tr>
+                            <tr class="table-danger">
+                                <th scope="row">3</th>
+                                <td>4-Sep-20</td>
+                                <td>Favourite</td>
+                                <td>Abdul Wilfred</td>
+                                <td>Favourited you.</td>
+                                <td>
+                                    <div class="col-md-12 text-center">
+                                        <input type="checkbox" class="form-check-input" id="delete_checkbox1">
+                                    </div>
+                                </td>                                  
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">4</th>
+                                <td>5-Sep-20</td>
+                                <td>Sponsor</td>
+                                <td>Ellis Russell</td>
+                                <td>Sponsored $67 to Save Lives Project through gofundme.</td>                               
+                                <td>
+                                    <div class="col-md-12 text-center">
+                                        <input type="checkbox" class="form-check-input" id="delete_checkbox1">
+                                    </div>
+                                </td>  
+                            </tr>
+                            <tr class="table-danger">
+                                <th scope="row">5</th>
+                                <td>6-Sep-20</td>
+                                <td>Like</td>
+                                <td>Laurence Raymond</td>
+                                <td>Liked Project Nature.</td>                               
+                                <td>
+                                    <div class="col-md-12 text-center">
+                                        <input type="checkbox" class="form-check-input" id="delete_checkbox1">
+                                    </div>
+                                </td>  
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">6</th>
+                                <td>7-Sep-20</td>
+                                <td>Like</td>
+                                <td>Hollie Stephens</td>
+                                <td>Liked Environment Friendly Materials Project.</td>                               
+                                 <td>
+                                    <div class="col-md-12 text-center">
+                                        <input type="checkbox" class="form-check-input" id="delete_checkbox1">
+                                    </div>
+                                </td>  
+                            </tr>
+                            <tr class="table-danger">
+                                <th scope="row">7</th>
+                                <td>8-Sep-20</td>
+                                <td>Sponsor</td>
+                                <td>Kyle Caleb</td>
+                                <td>Sponsored $45 to Eradicate Famine Project through kickstarter.</td>                               
+                                <td>
+                                    <div class="col-md-12 text-center">
+                                        <input type="checkbox" class="form-check-input" id="delete_checkbox1">
+                                    </div>
+                                </td>  
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">8</th>
+                                <td>9-Sep-20</td>
+                                <td>Message</td>
+                                <td>Kyla Matthews</td>
+                                <td>Messaged you.</td>                               
+                                 <td>
+                                    <div class="col-md-12 text-center">
+                                        <input type="checkbox" class="form-check-input" id="delete_checkbox1">
+                                    </div>
+                                </td>  
+                            </tr>
+                            <tr class="table-danger">
+                                <th scope="row">9</th>
+                                <td>10-Sep-20</td>
+                                <td>Account Edits</td>
+                                <td>Markam Doe</td>
+                                <td>Editted email details.</td>                               
+                                <td>
+                                    <div class="col-md-12 text-center">
+                                        <input type="checkbox" class="form-check-input" id="delete_checkbox1">
+                                    </div>
+                                </td>   
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">10</th>
+                                <td>11-Sep-20</td>
+                                <td>Deleted Projects</td>
+                                <td>Markam Doe</td>
+                                <td>Deleted project titled Dumpster Fire Project.</td>                               
+                                <td>
+                                    <div class="col-md-12 text-center">
+                                        <input type="checkbox" class="form-check-input" id="delete_checkbox1">
+                                    </div>
+                                </td>  
+                            </tr>
+                            <tr class="table-danger">
+                                <th scope="row">11</th>
+                                <td>12-Sep-20</td>
+                                <td>Message</td>
+                                <td>Marie Ferguson</td>
+                                <td>Messaged you.</td>                               
+                                <td>
+                                    <div class="col-md-12 text-center">
+                                        <input type="checkbox" class="form-check-input" id="delete_checkbox1">
+                                    </div>
+                                </td>   
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">12</th>
+                                <td>13-Sep-20</td>
+                                <td>Message</td>
+                                <td>Markam Doe</td>
+                                <td>Sent message to Alistair Warren.</td>                               
+                                <td>
+                                    <div class="col-md-12 text-center">
+                                        <input type="checkbox" class="form-check-input" id="delete_checkbox1">
+                                    </div>
+                                </td>  
+                            </tr>
+                            <tr class="table-danger">
+                                <th scope="row">13</th>
+                                <td>14-Sep-20</td>
+                                <td>Friend Request</td>
+                                <td>James Josh</td>
+                                <td>Sent you a friend request.</td>                               
+                                <td>
+                                    <div class="col-md-12 text-center">
+                                        <input type="checkbox" class="form-check-input" id="delete_checkbox1">
+                                    </div>
+                                </td>   
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">14</th>
+                                <td>15-Sep-20</td>
+                                <td>Created Project</td>
+                                <td>Markam Doe</td>
+                                <td>Created project tittled Reclaim Land Project.</td>                               
+                                <td>
+                                    <div class="col-md-12 text-center">
+                                        <input type="checkbox" class="form-check-input" id="delete_checkbox1">
+                                    </div>
+                                </td>  
+                            </tr>
+                            <tr class="table-danger">
+                                <th scope="row">15</th>
+                                <td>16-Sep-20</td>
+                                <td>Login</td>
+                                <td>Markam Doe</td>
+                                <td>Logined from new iPhone.</td>                               
+                                <td>
+                                    <div class="col-md-12 text-center">
+                                        <input type="checkbox" class="form-check-input" id="delete_checkbox1">
+                                    </div>
+                                </td>  
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">16</th>
+                                <td>17-Sep-20</td>
+                                <td>Comment</td>
+                                <td>Luke Simon</td>
+                                <td>Commented on Wonderful Life Project.</td>                               
+                                <td>
+                                    <div class="col-md-12 text-center">
+                                        <input type="checkbox" class="form-check-input" id="delete_checkbox1">
+                                    </div>
+                                </td>   
+                            </tr>                                                                                       
+                        </tbody>                       
+                    </table>                
+                </div>
+                
+                 
+                <!-- Row --> 
+                <!-- ============================================================== --> 
+                <!-- End PAge Content --> 
+                <!-- ============================================================== --> 
+            </div> 
+        </div> 
+    </div> 
+     
+    <script src="assets/plugins/jquery/jquery.min.js"></script> 
+    <!-- Bootstrap tether Core JavaScript --> 
+    <script src="assets/plugins/bootstrap/js/tether.min.js"></script> 
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+     
+    <script src="assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script> 
+ 
+</body> 
+</html> 
