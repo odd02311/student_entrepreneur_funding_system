@@ -84,142 +84,44 @@
 							<!-- ARTICLES -->
 							<div class="col-lg-9 col-md-12 col-sm-12">
 								<div class="row auto-clear">
+
+                                    <?php
+                                    		$index = 0;
+                                            $rows = getLatestPosts();
+                                            foreach ($rows as $row){
+                                    ?>
+
 									<article class="col-lg-3 col-md-6 col-sm-4">
 										<!-- POST L size -->
 										<div class="post post-medium">
 											<div class="thumbr">
-												<a class="afterglow post-thumb" href="" data-lity>
-													<img class="img-responsive" src="resources/overview_1.jpg" alt="#">
+												<a class="afterglow post-thumb" href=
+													<?php echo 'details.php?product_id=' .$row['product_id']; ?>
+												data-lity>
+													<img class="img-responsive" src=
+													<?php echo $row['pic_url']; ?>
+													>
 												</a>
+
 											</div>
 											<div class="infor">
 												<h4>
-													<a class="title" href="#">Product 1</a>
+													<a class="title" href=
+														<?php echo 'details.php?product_id=' .$row['product_id']; ?>
+													>
+														<?php echo $row['title']; ?>
+													</a>
 												</h4>
 												<span class="posts-txt" title="Posts from Channel"><i
-														class="fa fa-thumbs-up" aria-hidden="true"></i>20.895</span>
+														class="fa fa-thumbs-up" aria-hidden="true"></i>
+														<?php echo $row['likes']; ?>
+												</span>
 											</div>
 										</div>
 									</article>
-									<article class="col-lg-3 col-md-6 col-sm-4">
-										<!-- POST L size -->
-										<div class="post post-medium">
-											<div class="thumbr">
-												<a class="post-thumb" href="" data-lity>
-													<img class="img-responsive" src="resources/overview_2.jpg" alt="#">
-												</a>
-											</div>
-											<div class="infor">
-												<h4>
-													<a class="title" href="#">Product 2</a>
-												</h4>
-												<span class="posts-txt" title="Posts from Channel"><i
-														class="fa fa-thumbs-up" aria-hidden="true"></i>20.895</span>
-											</div>
-										</div>
-									</article>
-									<article class="col-lg-3 col-md-6 col-sm-4">
-										<!-- POST L size -->
-										<div class="post post-medium">
-											<div class="thumbr">
-												<a class="post-thumb" href="" data-lity>
-													<img class="img-responsive" src="resources/overview_3.jpg" alt="#">
-												</a>
-											</div>
-											<div class="infor">
-												<h4>
-													<a class="title" href="#">Product 3</a>
-												</h4>
-												<span class="posts-txt" title="Posts from Channel"><i
-														class="fa fa-thumbs-up" aria-hidden="true"></i>20.895</span>
-											</div>
-										</div>
-									</article>
-									<article class="col-lg-3 col-md-6 col-sm-4">
-										<!-- POST L size -->
-										<div class="post post-medium">
-											<div class="thumbr">
-												<a class="post-thumb" href="" data-lity>
-													<img class="img-responsive" src="resources/overview_4.jpg" alt="#">
-												</a>
-											</div>
-											<div class="infor">
-												<h4>
-													<a class="title" href="#">Product 4</a>
-												</h4>
-												<span class="posts-txt" title="Posts from Channel"><i
-														class="fa fa-thumbs-up" aria-hidden="true"></i>20.895</span>
-											</div>
-										</div>
-									</article>
-									<article class="col-lg-3 col-md-6 col-sm-4">
-										<!-- POST L size -->
-										<div class="post post-medium">
-											<div class="thumbr">
-												<a class="post-thumb" href="" data-lity>
-													<img class="img-responsive" src="resources/overview_5.jpg" alt="#">
-												</a>
-											</div>
-											<div class="infor">
-												<h4>
-													<a class="title" href="#">Product 5</a>
-												</h4>
-												<span class="posts-txt" title="Posts from Channel"><i
-														class="fa fa-thumbs-up" aria-hidden="true"></i>20.895</span>
-											</div>
-										</div>
-									</article>
-									<article class="col-lg-3 col-md-6 col-sm-4">
-										<!-- POST L size -->
-										<div class="post post-medium">
-											<div class="thumbr">
-												<a class="post-thumb" href="" data-lity>
-													<img class="img-responsive" src="resources/overview_6.jpg" alt="#">
-												</a>
-											</div>
-											<div class="infor">
-												<h4>
-													<a class="title" href="#">Product 6</a>
-												</h4>
-												<span class="posts-txt" title="Posts from Channel"><i
-														class="fa fa-thumbs-up" aria-hidden="true"></i>20.895</span>
-											</div>
-										</div>
-									</article>
-									<article class="col-lg-3 col-md-6 col-sm-4">
-										<!-- POST L size -->
-										<div class="post post-medium">
-											<div class="thumbr">
-												<a class="post-thumb" href="" data-lity>
-													<img class="img-responsive" src="resources/overview_7.jpg" alt="#">
-												</a>
-											</div>
-											<div class="infor">
-												<h4>
-													<a class="title" href="#">Product 7</a>
-												</h4>
-												<span class="posts-txt" title="Posts from Channel"><i
-														class="fa fa-thumbs-up" aria-hidden="true"></i>20.895</span>
-											</div>
-										</div>
-									</article>
-									<article class="col-lg-3 col-md-6 col-sm-4">
-										<!-- POST L size -->
-										<div class="post post-medium">
-											<div class="thumbr">
-												<a class="post-thumb" href="" data-lity>
-													<img class="img-responsive" src="resources/overview_8.jpg" alt="#">
-												</a>
-											</div>
-											<div class="infor">
-												<h4>
-													<a class="title" href="#">Product 8</a>
-												</h4>
-												<span class="posts-txt" title="Posts from Channel"><i
-														class="fa fa-thumbs-up" aria-hidden="true"></i>20.895</span>
-											</div>
-										</div>
-									</article>
+
+                                    <?php } ?>
+
 								</div>
 								<div class="clearfix spacer"></div>
 							</div>
@@ -237,194 +139,69 @@
 					<!-- BOOTSTRAP TABS -->
 					<h2 class="title">Popular</h2>
 					<div class="row auto-clear">
-						<!-- TAB CONTENTS -->
 
-						<!-- POST L size -->
+                        <?php
+                        		$index = 0;
+                                $rows = getPopularPosts();
+                                foreach ($rows as $row){
+                        ?>
 						<article class="col-lg-2 col-md-4 col-sm-4 post post-medium">
 							<div class="thumbr">
-								<a class="post-thumb" href="" data-lity>
-									<img class="img-responsive" src="img/covers/thumb-tab.jpg" alt="#">
+								<a class="post-thumb" href=
+									<?php echo 'details.php?product_id=' .$row['product_id']; ?>
+								data-lity>
+									<img class="img-responsive" src=
+										<?php echo $row['pic_url']; ?>
+									>
 								</a>
 							</div>
 							<div class="infor">
 								<h4>
-									<a class="title" href="#">Product 9</a>
+									<a class="title" href=
+										<?php echo 'details.php?product_id=' .$row['product_id']; ?>
+									>
+										<?php echo $row['title']; ?>
+									</a>
 								</h4>
 								<span class="posts-txt" title="Posts from Channel"><i class="fa fa-thumbs-up"
-										aria-hidden="true"></i>20.895</span>
+										aria-hidden="true"></i>
+									<?php echo $row['likes']; ?>
+								</span>
 							</div>
 						</article>
-						<!-- POST L size -->
-						<article class="col-lg-2 col-md-4 col-sm-4 post post-medium">
-							<div class="thumbr">
-								<a class="post-thumb" href="" data-lity>
-									<img class="img-responsive" src="img/covers/thumb-tab2.jpg" alt="#">
-								</a>
-							</div>
-							<div class="infor">
-								<h4>
-									<a class="title" href="#">Product 10</a>
-								</h4>
-								<span class="posts-txt" title="Posts from Channel"><i class="fa fa-thumbs-up"
-										aria-hidden="true"></i>20.895</span>
-							</div>
-						</article>
-						<!-- POST L size -->
-						<article class="col-lg-2 col-md-4 col-sm-4 post post-medium">
-							<div class="thumbr">
-								<a class="post-thumb" href="" data-lity>
-									<img class="img-responsive" src="img/covers/thumb-tab3.jpg" alt="#">
-								</a>
-							</div>
-							<div class="infor">
-								<h4>
-									<a class="title" href="#">Product 11</a>
-								</h4>
-								<span class="posts-txt" title="Posts from Channel"><i class="fa fa-thumbs-up"
-										aria-hidden="true"></i>20.895</span>
-							</div>
-						</article>
-						<!-- POST L size -->
-						<article class="col-lg-2 col-md-4 col-sm-4 post post-medium">
-							<div class="thumbr">
-								<a class="post-thumb" href="" data-lity>
-									<img class="img-responsive" src="img/covers/thumb-tab4.jpg" alt="#">
-								</a>
-							</div>
-							<div class="infor">
-								<h4>
-									<a class="title" href="#">Product 12</a>
-								</h4>
-								<span class="posts-txt" title="Posts from Channel"><i class="fa fa-thumbs-up"
-										aria-hidden="true"></i>20.895</span>
-							</div>
-						</article>
-						<!-- POST L size -->
-						<article class="col-lg-2 col-md-4 col-sm-4 post post-medium">
-							<div class="thumbr">
-								<a class="post-thumb" href="" data-lity>
-									<img class="img-responsive" src="img/covers/thumb-tab5.jpg" alt="#">
-								</a>
-							</div>
-							<div class="infor">
-								<h4>
-									<a class="title" href="#">Product 13</a>
-								</h4>
-								<span class="posts-txt" title="Posts from Channel"><i class="fa fa-thumbs-up"
-										aria-hidden="true"></i>20.895</span>
-							</div>
-						</article>
-						<!-- POST L size -->
-						<article class="col-lg-2 col-md-4 col-sm-4 post post-medium">
-							<div class="thumbr">
-								<a class="post-thumb" href="" data-lity>
-									<img class="img-responsive" src="img/covers/thumb-tab6.jpg" alt="#">
-								</a>
-							</div>
-							<div class="infor">
-								<h4>
-									<a class="title" href="#">Product 14</a>
-								</h4>
-								<span class="posts-txt" title="Posts from Channel"><i class="fa fa-thumbs-up"
-										aria-hidden="true"></i>20.895</span>
-							</div>
-						</article>
+						<?php } ?>
 					</div>
 
 					<h2 class="title">TOP RATED</h2>
 					<div class="row auto-clear">
-						<!-- TAB CONTENTS -->
-
-						<!-- POST L size -->
+                        <?php
+                        		$index = 0;
+                                $rows = getTopRatedPosts();
+                                foreach ($rows as $row){
+                        ?>
 						<article class="col-lg-2 col-md-4 col-sm-4 post post-medium">
 							<div class="thumbr">
-								<a class="post-thumb" href="" data-lity>
-									<img class="img-responsive" src="img/covers/thumb-tab.jpg" alt="#">
+								<a class="post-thumb" href=
+									<?php echo 'details.php?product_id=' .$row['product_id']; ?>
+								data-lity>
+									<img class="img-responsive" src=
+										<?php echo $row['pic_url']; ?>
+									>
 								</a>
 							</div>
 							<div class="infor">
 								<h4>
-									<a class="title" href="#">Product 9</a>
+									<a class="title" href="#">
+										<?php echo $row['title']; ?>
+									</a>
 								</h4>
 								<span class="posts-txt" title="Posts from Channel"><i class="fa fa-thumbs-up"
-										aria-hidden="true"></i>20.895</span>
+										aria-hidden="true"></i>
+									<?php echo $row['likes']; ?>
+								</span>
 							</div>
 						</article>
-						<!-- POST L size -->
-						<article class="col-lg-2 col-md-4 col-sm-4 post post-medium">
-							<div class="thumbr">
-								<a class="post-thumb" href="" data-lity>
-									<img class="img-responsive" src="img/covers/thumb-tab2.jpg" alt="#">
-								</a>
-							</div>
-							<div class="infor">
-								<h4>
-									<a class="title" href="#">Product 10</a>
-								</h4>
-								<span class="posts-txt" title="Posts from Channel"><i class="fa fa-thumbs-up"
-										aria-hidden="true"></i>20.895</span>
-							</div>
-						</article>
-						<!-- POST L size -->
-						<article class="col-lg-2 col-md-4 col-sm-4 post post-medium">
-							<div class="thumbr">
-								<a class="post-thumb" href="" data-lity>
-									<img class="img-responsive" src="img/covers/thumb-tab3.jpg" alt="#">
-								</a>
-							</div>
-							<div class="infor">
-								<h4>
-									<a class="title" href="#">Product 11</a>
-								</h4>
-								<span class="posts-txt" title="Posts from Channel"><i class="fa fa-thumbs-up"
-										aria-hidden="true"></i>20.895</span>
-							</div>
-						</article>
-						<!-- POST L size -->
-						<article class="col-lg-2 col-md-4 col-sm-4 post post-medium">
-							<div class="thumbr">
-								<a class="post-thumb" href="" data-lity>
-									<img class="img-responsive" src="img/covers/thumb-tab4.jpg" alt="#">
-								</a>
-							</div>
-							<div class="infor">
-								<h4>
-									<a class="title" href="#">Product 12</a>
-								</h4>
-								<span class="posts-txt" title="Posts from Channel"><i class="fa fa-thumbs-up"
-										aria-hidden="true"></i>20.895</span>
-							</div>
-						</article>
-						<!-- POST L size -->
-						<article class="col-lg-2 col-md-4 col-sm-4 post post-medium">
-							<div class="thumbr">
-								<a class="post-thumb" href="" data-lity>
-									<img class="img-responsive" src="img/covers/thumb-tab5.jpg" alt="#">
-								</a>
-							</div>
-							<div class="infor">
-								<h4>
-									<a class="title" href="#">Product 13</a>
-								</h4>
-								<span class="posts-txt" title="Posts from Channel"><i class="fa fa-thumbs-up"
-										aria-hidden="true"></i>20.895</span>
-							</div>
-						</article>
-						<!-- POST L size -->
-						<article class="col-lg-2 col-md-4 col-sm-4 post post-medium">
-							<div class="thumbr">
-								<a class="post-thumb" href="" data-lity>
-									<img class="img-responsive" src="img/covers/thumb-tab6.jpg" alt="#">
-								</a>
-							</div>
-							<div class="infor">
-								<h4>
-									<a class="title" href="#">Product 14</a>
-								</h4>
-								<span class="posts-txt" title="Posts from Channel"><i class="fa fa-thumbs-up"
-										aria-hidden="true"></i>20.895</span>
-							</div>
-						</article>
+						<?php } ?>
 					</div>
 
 				</div>

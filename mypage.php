@@ -72,17 +72,34 @@
                         <div class="card">
                             <img class="card-img-top" src="img/mypage/profile-bg.jpg" alt="Card image cap">
                             <div class="card-block little-profile text-center">
-                                <div class="pro-img"><img src="img/headimg/1.png" alt="user" /></div>
-                                <h3 class="m-b-0">kelvin</h3>
-                                <p>Web Designer &amp; Developer</p>
+                                <div class="pro-img"><img src= 
+                                    <?php
+                                        if(isset($_SESSION['headimg'])) {
+                                            echo $_SESSION['headimg'];
+                                        } else {
+                                            echo 'img/headimg/1.png';
+                                        } 
+                                    ?>
+                                    alt="user" />
+                                </div>
+                                <h3 class="m-b-0">
+                                    <?php
+                                        if(isset($_SESSION['username'])) {
+                                            echo $_SESSION['username'];
+                                        } else {
+                                            echo '';
+                                        } 
+                                    ?>
+                                </h3>
+    
                                 <a href="javascript:void(0)" class="m-t-10 waves-effect waves-dark btn btn-primary btn-md btn-rounded">Follow</a>
                                 <div class="row text-center m-t-20">
                                     <div class="col-lg-4 col-md-4 m-t-20">
-                                        <h3 class="m-b-0 font-light">99</h3><small>Articles</small></div>
+                                        <h3 class="m-b-0 font-light">0</h3><small>Articles</small></div>
                                     <div class="col-lg-4 col-md-4 m-t-20">
-                                        <h3 class="m-b-0 font-light">269</h3><small>Followers</small></div>
+                                        <h3 class="m-b-0 font-light">0</h3><small>Followers</small></div>
                                     <div class="col-lg-4 col-md-4 m-t-20">
-                                        <h3 class="m-b-0 font-light">66</h3><small>Following</small></div>
+                                        <h3 class="m-b-0 font-light">0</h3><small>Following</small></div>
                                 </div>
                             </div>
                         </div>
@@ -101,57 +118,52 @@
                                 <div class="tab-pane active" id="home" role="tabpanel">
                                     <div class="card-block">
                                         <div class="profiletimeline">
-                                            <div class="sl-item">
-                                                <div class="sl-left"> <img src="img/headimg/1.png" alt="user" class="img-circle"> </div>
-                                                <div class="sl-right">
-                                                    <div><a href="#" class="link">Kelvin</a> <span class="sl-date">5 minutes ago</span>
-                                                        <p>assign a new task </p>
-                                                        <div class="row">
-                                                            <div class="col-lg-3 col-md-6 m-b-20"><img src="img/mypage/img1.jpg" alt="user" class="img-responsive radius"></div>
-                                                            <div class="col-lg-3 col-md-6 m-b-20"><img src="img/mypage/img2.jpg" alt="user" class="img-responsive radius"></div>
-                                                            <div class="col-lg-3 col-md-6 m-b-20"><img src="img/mypage/img3.jpg" alt="user" class="img-responsive radius"></div>
-                                                            <div class="col-lg-3 col-md-6 m-b-20"><img src="img/mypage/img4.jpg" alt="user" class="img-responsive radius"></div>
-                                                        </div>
-                                                        <div class="like-comm"> <a href="javascript:void(0)" class="link m-r-10">2 comments</a> <a href="javascript:void(0)" class="link m-r-10"><i class="fa fa-heart text-danger"></i> 5 Likes</a> </div>
-                                                    </div>
-                                                </div>
-                                            </div>
 
-                                            <hr>
+                                            <?php
+                                                    $rows = getMyPosts($_SESSION['username']);
+                                                    if(!empty($rows)){
+                                                    foreach ($rows as $row){
+                                            ?>
                                             <div class="sl-item">
-                                                <div class="sl-left"> <img src="img/headimg/1.png" alt="user" class="img-circle"> </div>
+                                                <div class="sl-left"> 
+                                                    <img src=
+                                                    <?php echo $_SESSION['headimg']; ?>
+                                                    alt="user" class="img-circle"> 
+                                                </div>
+
                                                 <div class="sl-right">
-                                                    <div> <a href="#" class="link">Doe</a> <span class="sl-date">5 minutes ago</span>
+                                                    <div> <a href="#" class="link">
+                                                        <?php echo $row['username']; ?>
+                                                        </a> 
+                                                        <span class="sl-date">1 minute ago</span>
                                                         <div class="m-t-20 row">
-                                                            <div class="col-md-3 col-xs-12"><img src="img/mypage/img1.jpg" alt="user" class="img-responsive radius"></div>
+                                                            <div class="col-md-3 col-xs-12">
+                                                         <a href=
+                                                                <?php echo 'details.php?product_id=' .$row['product_id']; ?>
+                                                                class="link m-r-10">0 comments
+                                                        
+                                                                    <img src=
+                                                                    <?php echo $row['pic_url']; ?>
+                                                                    alt="user" class="img-responsive radius">
+                                                                </a> 
+                                                            </div>
                                                             <div class="col-md-9 col-xs-12">
-                                                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. </p></div>
+                                                                <p> 
+                                                                    <?php echo $row['description']; ?>
+                                                                </p>
+                                                            </div>
                                                         </div>
-                                                        <div class="like-comm m-t-20"> <a href="javascript:void(0)" class="link m-r-10">2 comments</a> <a href="javascript:void(0)" class="link m-r-10"><i class="fa fa-heart text-danger"></i> 5 Likes</a> </div>
+                                                        <div class="like-comm m-t-20"> <a href=
+                                                         class="link m-r-10">0 comments</a> <a href="javascript:void(0)" class="link m-r-10"><i class="fa fa-heart text-danger"></i>
+                                                            <?php echo $row['likes']; ?>
+                                                        </a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <hr>
-                                            <div class="sl-item">
-                                                <div class="sl-left"> <img src="img/headimg/1.png" alt="user" class="img-circle"> </div>
-                                                <div class="sl-right">
-                                                    <div><a href="#" class="link">John</a> <span class="sl-date">5 minutes ago</span>
-                                                        <p class="m-t-10"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper </p>
-                                                    </div>
-                                                    <div class="like-comm m-t-20"> <a href="javascript:void(0)" class="link m-r-10">2 comments</a> <a href="javascript:void(0)" class="link m-r-10"><i class="fa fa-heart text-danger"></i> 5 Likes</a> </div>
-                                                </div>
-                                            </div>
-                                            <hr>
-                                            <div class="sl-item">
-                                                <div class="sl-left"> <img src="img/headimg/1.png" alt="user" class="img-circle"> </div>
-                                                <div class="sl-right">
-                                                    <div><a href="#" class="link">John</a> <span class="sl-date">5 minutes ago</span>
-                                                        <blockquote class="m-t-10">
-                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                                                        </blockquote>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <?php }} ?>
+
                                         </div>
                                     </div>
                                 </div>
@@ -221,17 +233,17 @@
                                         </p>
                                         <h4 class="font-medium m-t-30">Skill Set</h4>
                                         <hr>
-                                        <h5 class="m-t-30">PHP <span class="pull-right">80%</span></h5>
+                                        <h5 class="m-t-30">PHP <span class="pull-right">0%</span></h5>
                                         <div class="progress">
-                                            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%; height:6px;"> <span class="sr-only">50% Complete</span> </div>
+                                            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%; height:6px;"> <span class="sr-only">0% Complete</span> </div>
                                         </div>
-                                        <h5 class="m-t-30">HTML 5 <span class="pull-right">90%</span></h5>
+                                        <h5 class="m-t-30">HTML 5 <span class="pull-right">0%</span></h5>
                                         <div class="progress">
-                                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%; height:6px;"> <span class="sr-only">50% Complete</span> </div>
+                                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%; height:6px;"> <span class="sr-only">0% Complete</span> </div>
                                         </div>
-                                        <h5 class="m-t-30">jQuery <span class="pull-right">50%</span></h5>
+                                        <h5 class="m-t-30">jQuery <span class="pull-right">0%</span></h5>
                                         <div class="progress">
-                                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%; height:6px;"> <span class="sr-only">50% Complete</span> </div>
+                                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%; height:6px;"> <span class="sr-only">0% Complete</span> </div>
                                         </div>
                                     </div>
                                 </div>
@@ -288,7 +300,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-md-12">Decription</label>
+                                                <label class="col-md-12">Description</label>
                                                 <div class="col-md-12">
                                                     <textarea rows="5" placeholder=
                                                     <?php

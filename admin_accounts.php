@@ -27,7 +27,15 @@ require_once dirname(__FILE__) .'/common.php';
     <div id="main-wrapper">
 
         <header class="topbar">
-            <a class="userinfo" href=""><img src="img/headimg/1.png" class="profile-pic" />Kelvin</a>
+            <a class="userinfo" href=""><img src="img/headimg/1.png" class="profile-pic" />
+                <?php
+                    if(isset($_SESSION['username'])) {
+                        echo $_SESSION['username'];
+                    } else {
+                        echo '';
+                    } 
+                ?>
+            </a>
         </header>
 
 

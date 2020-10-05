@@ -180,4 +180,47 @@
 		$sql="SELECT * FROM productions ORDER BY create_date DESC limit 0,100";
 		return fetchAll($link, $sql);
 	}
+
+	function getLatestPosts()
+	{
+		$link = connect();
+		$sql="SELECT * FROM productions ORDER BY create_date DESC limit 0,8";
+		return fetchAll($link, $sql);
+	}
+
+	function getPopularPosts()
+	{
+		$link = connect();
+		$sql="SELECT * FROM productions ORDER BY create_date ASC limit 0,6";
+		return fetchAll($link, $sql);
+	}
+
+	function getTopRatedPosts()
+	{
+		$link = connect();
+		$sql="SELECT * FROM productions ORDER BY likes DESC limit 0,6";
+		return fetchAll($link, $sql);
+	}
+
+	function getMyPosts($username)
+	{
+		$link = connect();
+		$sql="SELECT * FROM productions WHERE username='$username' ORDER BY create_date DESC limit 0,2";
+		return fetchAll($link, $sql);
+	}
+
+	function getProductionById($product_id)
+	{
+		$link = connect();
+		$sql="SELECT * FROM productions WHERE product_id=$product_id";
+		return fetchOne($link, $sql);
+	}
+
+	function inc_view($product_id)
+	{
+		$link = connect();
+        $query = "UPDATE productions SET views = views +1 WHERE product_id = $product_id";
+        $res = mysqli_query ( $link, $query );
+        return $res;
+	}
 ?>

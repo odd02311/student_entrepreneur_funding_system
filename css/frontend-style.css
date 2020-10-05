@@ -133,6 +133,9 @@ a.post-thumb {
 .thumbr img { width: 100%; border-radius: 8px;}
 
 
+.infor {
+	height: 90px;
+}
 
 /* BOOTSTRAP TABS */
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {

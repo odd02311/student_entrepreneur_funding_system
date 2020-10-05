@@ -135,7 +135,11 @@
                         <div class="video-content">
                            <h2 class="title main-head-title">Video Details</h2>
                            <p>
+<<<<<<< Updated upstream
+                              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+=======
                               <?php echo $product_info['description']; ?>
+>>>>>>> Stashed changes
                            </p>
                         </div>
                      </article>
@@ -173,11 +177,18 @@
 								</div>
 							</div>
 						
+<<<<<<< Updated upstream
 							<div class="col-sm-1">
 								<div class="thumbnail">
 									<img class="img-responsive user-photo" src="img/headimg/2.png" alt="Comment User Avatar">
 								</div>
 							</div>
+=======
+              <div class="col-sm-1">
+                <div class="thumbnail">
+                  <img class="img-responsive user-photo" src="img/headimg/2.png" alt="Comment User Avatar">
+                </div>
+              </div>
 
               <div class="col-sm-11">
                 <div class="panel panel-default">
@@ -209,13 +220,22 @@
                 </div>
               </div>
 
+>>>>>>> Stashed changes
 
-              <div class="col-sm-1">
-                <div class="thumbnail">
-                  <img class="img-responsive user-photo" src="img/headimg/4.png" alt="Comment User Avatar">
-                </div>
-              </div>
+							<div class="col-sm-11">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<strong>Tian cheng</strong> <span class="pull-right">2020.8.14 12:00</span>
+									</div>
+									<div class="panel-body">
+										Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+									</div>
+								</div>
+							</div>
+						</div>
 
+<<<<<<< Updated upstream
+=======
               <div class="col-sm-11">
                 <div class="panel panel-default">
                   <div class="panel-heading">
@@ -227,6 +247,7 @@
                 </div>
               </div>
             </div>
+>>>>>>> Stashed changes
 					</section>
 				  
 				   </div>

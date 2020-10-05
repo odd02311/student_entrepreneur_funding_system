@@ -31,18 +31,6 @@ switch($act){
                 echo '0';
             }
         break;
-    case 'incviews':
-            $product_id=$_REQUEST['product_id'];
-
-            $query = "UPDATE productions SET views = views +1 WHERE product_id = " .$product_id;
-            $res = mysqli_query ( $link, $query );
-            if($res){
-                echo '1';
-            }
-            else{
-                echo '0';
-            }
-        break;
     case 'add':
             $likes = 0;
             $views = 0;

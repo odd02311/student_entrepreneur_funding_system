@@ -51,6 +51,7 @@ class Login {
 				$_SESSION['phone'] = $account['phone'];
 				$_SESSION['school'] = $account['school'];
 				$_SESSION['email'] = $account['email'];
+				$_SESSION['headimg'] = $account['headimg_url'];
 				$_SESSION['desc'] = $account['description'];
 
 				return "Login successfully";

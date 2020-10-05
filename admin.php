@@ -26,8 +26,18 @@
 
     <div id="main-wrapper">
 
+
+
         <header class="topbar">
-            <a class="userinfo" href=""><img src="img/headimg/1.png" class="profile-pic" />Kelvin</a>
+            <a class="userinfo" href=""><img src="img/headimg/1.png" class="profile-pic" />
+                <?php
+                    if(isset($_SESSION['username'])) {
+                        echo $_SESSION['username'];
+                    } else {
+                        echo '';
+                    } 
+                ?>
+        </a>
         </header>
 
 
@@ -69,12 +79,25 @@
                     <div class="col-lg-4 col-xlg-3 col-md-5">
                         <div class="card">
                             <div class="card-block">
-                                <center class="m-t-30"> <img src="img/headimg/1.png" class="img-circle" width="150" />
-                                    <h4 class="card-title m-t-10">Hanna Gover</h4>
-                                    <h6 class="card-subtitle">Accoubts Manager Amix corp</h6>
-                                    <div class="row text-center justify-content-md-center">
-                                        <div class="col-8"><i>Follower:</i> <font class="font-medium">254</font></div>
-                                    </div>
+                                <center class="m-t-30"> <img src=
+                                <?php
+                                    if(isset($_SESSION['headimg'])) {
+                                        echo $_SESSION['headimg'];
+                                    } else {
+                                        echo 'img/headimg/1.png';
+                                    } 
+                                ?>
+                                class="img-circle" width="150" />
+                                    <h4 class="card-title m-t-10">
+                                        <?php
+                                            if(isset($_SESSION['username'])) {
+                                                echo $_SESSION['username'];
+                                            } else {
+                                                echo '';
+                                            } 
+                                        ?>
+                                    </h4>
+                                    <h6 class="card-subtitle">Website administrator</h6>
                                 </center>
                             </div>
                         </div>
