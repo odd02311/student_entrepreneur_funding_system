@@ -27,10 +27,20 @@
 			</div>
 			<!-- MENU -->
 			<div class="row ">
+
+
 				<div class="col-md-12">
+
 					<nav class="navbar navbar-default">
 
 						<div class="collapse navbar-collapse js-navbar-collapse navbg ">
+
+							<div class="search-block ">
+								<form action="search.php">
+								   <input name="keyword" type="search" placeholder="Search">
+								</form>
+						 	</div>
+
 							<ul class="nav navbar-nav">
 								<li><a href="index.php">Home</a></li>
 								<li>
@@ -58,6 +68,7 @@
 							</ul>
 						</div>
 					</nav>
+
 				</div>
 			</div>
 			<!-- CORE -->
@@ -79,7 +90,7 @@
 				<!-- HOME MAIN POSTS -->
 				<div class="col-lg-10 col-md-8">
 					<section id="home-main">
-						<h2 class="icon"><i class="fa fa-television" aria-hidden="true"></i>latest productions</h2>
+						<h2 class="icon"><i class="fa fa-television" aria-hidden="true"></i>Popular productions</h2>
 						<div class="row">
 							<!-- ARTICLES -->
 							<div class="col-lg-9 col-md-12 col-sm-12">
@@ -87,7 +98,7 @@
 
                                     <?php
                                     		$index = 0;
-                                            $rows = getLatestPosts();
+                                            $rows = getPopularPosts();
                                             foreach ($rows as $row){
                                     ?>
 
@@ -137,12 +148,12 @@
 				<div class="col-lg-1 col-md-2"> </div>
 				<div class="col-lg-10 col-md-8">
 					<!-- BOOTSTRAP TABS -->
-					<h2 class="title">Popular</h2>
+					<h2 class="title">TOP RATED</h2>
 					<div class="row auto-clear">
 
                         <?php
                         		$index = 0;
-                                $rows = getPopularPosts();
+                                $rows = getTopRatedPosts();
                                 foreach ($rows as $row){
                         ?>
 						<article class="col-lg-2 col-md-4 col-sm-4 post post-medium">
@@ -172,11 +183,11 @@
 						<?php } ?>
 					</div>
 
-					<h2 class="title">TOP RATED</h2>
+					<h2 class="title">Latest</h2>
 					<div class="row auto-clear">
                         <?php
                         		$index = 0;
-                                $rows = getTopRatedPosts();
+                                $rows = getLatestPosts();
                                 foreach ($rows as $row){
                         ?>
 						<article class="col-lg-2 col-md-4 col-sm-4 post post-medium">

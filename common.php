@@ -184,14 +184,14 @@
 	function getLatestPosts()
 	{
 		$link = connect();
-		$sql="SELECT * FROM productions ORDER BY create_date DESC limit 0,8";
+		$sql="SELECT * FROM productions ORDER BY create_date DESC limit 0,6";
 		return fetchAll($link, $sql);
 	}
 
 	function getPopularPosts()
 	{
 		$link = connect();
-		$sql="SELECT * FROM productions ORDER BY create_date ASC limit 0,6";
+		$sql="SELECT * FROM productions ORDER BY create_date ASC limit 0,8";
 		return fetchAll($link, $sql);
 	}
 
@@ -223,4 +223,15 @@
         $res = mysqli_query ( $link, $query );
         return $res;
 	}
+
+	function search($keyword)
+	{
+
+		$link = connect();
+        $query = "SELECT  * FROM accounts INNER JOIN productions ON accounts.username = productions.username WHERE  productions.description LIKE '%$keyword%' or productions.title LIKE '%$keyword%' or productions.author LIKE '%$keyword%' or productions.username  LIKE '%$keyword%'";
+        $res = mysqli_query ( $link, $query );
+        return $res;
+	}
+
+
 ?>
