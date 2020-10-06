@@ -82,9 +82,21 @@
                   <article>
                      <h2 class="icon"><i class="fa fa-gears" aria-hidden="true"></i>categories</h2>
                       <ul class="sidebar-links">
-                        <li class="fa fa-chevron-right"><a href="#">Video</a><span>7.800</span></li>
-                        <li class="fa fa-chevron-right"><a href="#">Animation</a><span>2.000</span></li>
-                        <li class="fa fa-chevron-right"><a href="#">Music Clip</a><span>650</span></li>
+                        <li class="fa fa-chevron-right"><a href="#">Video</a>
+                        <span>
+                          <?php echo getItemsNumberbyCategory('Video'); ?>
+                        </span>
+                        </li>
+                        <li class="fa fa-chevron-right"><a href="#">Animation</a>
+                        <span>
+                          <?php echo getItemsNumberbyCategory('Animation'); ?>
+                        </span>
+                        </li>
+                        <li class="fa fa-chevron-right"><a href="#">Music Clip</a>
+                        <span>
+                          <?php echo getItemsNumberbyCategory('Music Clip'); ?>
+                        </span>
+                        </li>
                       </ul>
                   </article>
                   <div class="clearfix spacer"></div>
@@ -112,7 +124,7 @@
                            </h2>
                            <div class="metabox">
                               <span class="meta-i">
-                              <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                              <i id="like" class="fa fa-thumbs-up" aria-hidden="true"></i>
                               <?php echo $product_info['likes']; ?>
                               </span>
                               <span class="meta-i">
@@ -242,12 +254,30 @@
     <script src="assets/plugins/jquery/jquery.min.js"></script>
     <script>
  
+        $("#like").click(function () {
+            var param = {
+                "act": 'like',
+                "product_id": $("#product_id").val()
+            };
+            $.ajax({
+                url:"/student_entrepreneur_funding_system/doaction.php",
+                data:param,
+                type:"POST",
+                dataType:"text",
+                success:function (data) {
+                    if (data.search('Like successfully') > -1){
+                        window.document.location.reload();
+                    }
+                }
+            })
+        })
+
         $("#post_btn").click(function () {
             var param = {
                 "act": 'comment',
                 "content": $("#content").val(),
                 "username": $("#username").val(),
-                "product_id": $("#product_id").val(),
+                "product_id": $("#product_id").val()
             };
 
             if ($("#username").val() == ''){

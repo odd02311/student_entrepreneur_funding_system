@@ -124,8 +124,8 @@
 	 * @param string $table
 	 * @return number|boolean
 	 */
-	function getTotalRows($link, $table) {
-	    $query = "SELECT COUNT(*) AS totalRows FROM {$table}";
+	function getTotalRows($link, $table, $key, $value) {
+	    $query = "SELECT COUNT(*) AS totalRows FROM {$table} WHERE $key = '$value'";
 	    $result = mysqli_query ( $link, $query );
 	    if ($result && mysqli_num_rows ( $result ) == 1) {
 	        $row = mysqli_fetch_assoc ( $result );
@@ -218,6 +218,13 @@
 		$link = connect();
 		$sql="SELECT * FROM productions WHERE product_id=$product_id";
 		return fetchOne($link, $sql);
+	}
+
+	function getItemsNumberbyCategory($category)
+	{
+		$link = connect();
+		$sql="SELECT count(*) AS quantity FROM productions WHERE category=$category";
+		return getTotalRows($link, 'productions', 'category', $category);
 	}
 
 	function getComments($product_id)

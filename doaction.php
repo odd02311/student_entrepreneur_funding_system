@@ -4,11 +4,6 @@ session_start();
 require_once dirname(__FILE__) .'/common.php';
 
 
-//determines whether user logged in
-if (!isLoggedIn()){
-    die("you need login firstly");
-}
-
 if (!isset($_REQUEST['act'])){
     die("no operation");
 }
@@ -25,13 +20,19 @@ switch($act){
             $query = "UPDATE productions SET likes = likes +1 WHERE product_id = " .$product_id;
             $res = mysqli_query ( $link, $query );
             if($res){
-                echo '1';
+                echo 'Like successfully';
             }
             else{
-                echo '0';
+                echo 'Like failed';
             }
         break;
     case 'add':
+
+            //determines whether user logged in
+            if (!isLoggedIn()){
+                die("you need login firstly");
+            }
+
             $likes = 0;
             $views = 0;
             $dislikes = 0;
@@ -53,6 +54,11 @@ switch($act){
             }
         break;
     case 'update_account':
+
+            //determines whether user logged in
+            if (!isLoggedIn()){
+                die("you need login firstly");
+            }
 
             $phone = $_REQUEST['phone'];
             $email = $_REQUEST['email'];
@@ -105,6 +111,11 @@ switch($act){
 
         break;
     case 'del':
+            //determines whether user logged in
+            if (!isLoggedIn()){
+                die("you need login firstly");
+            }
+
             $res = delete($link, $table,"id = ".$id);
             if($res){
             echo '1';
@@ -114,6 +125,11 @@ switch($act){
             }
          break;
     case 'change':
+            //determines whether user logged in
+            if (!isLoggedIn()){
+                die("you need login firstly");
+            }
+
             $sex=$_REQUEST['sex'];
             $age=$_REQUEST['age'];
             $id=$_REQUEST['id'];
@@ -123,6 +139,12 @@ switch($act){
              echo json_encode($row);              
         break;
     case 'list':
+
+            //determines whether user logged in
+            if (!isLoggedIn()){
+                die("you need login firstly");
+            }
+
             $query = "select * from productions";
             $rows = fetchAll($link, $query);
             if($rows){
@@ -133,6 +155,11 @@ switch($act){
             }
         break;
     case 'comment':
+            //determines whether user logged in
+            if (!isLoggedIn()){
+                die("you need login firstly");
+            }
+
             $username = $username;
             $content = $_REQUEST["content"];
             $product_id = $_REQUEST["product_id"];
