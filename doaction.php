@@ -132,14 +132,18 @@ switch($act){
                 return '0';
             }
         break;
-    case 'mylist':
-            $query = "select * from productions where username = " .$username;
-            $rows = fetchAll($link, $query);
-            if($rows){
-                return json_encode($rows);
+    case 'comment':
+            $username = $username;
+            $content = $_REQUEST["content"];
+            $product_id = $_REQUEST["product_id"];
+
+            $data = compact('username','content','product_id');
+            $res = insert($link, $data, 'comments');
+            if($res){
+                echo 'Post successfully';
             }
             else{
-                return '0';
+                echo 'Post failed';
             }
         break;
 }

@@ -163,8 +163,12 @@
 	}
 
 	function getUserName()
-	{
-		return trim($_SESSION['username']);
+	{	
+		if (isset($_SESSION['username'])){
+			return trim($_SESSION['username']);
+		}else{
+			return '';
+		}
 	}
 
 	function getAllUsers()
@@ -214,6 +218,14 @@
 		$link = connect();
 		$sql="SELECT * FROM productions WHERE product_id=$product_id";
 		return fetchOne($link, $sql);
+	}
+
+	function getComments($product_id)
+	{
+
+		$link = connect();
+        $sql="SELECT * FROM accounts INNER JOIN comments ON accounts.username = comments.username WHERE comments.product_id=$product_id";
+        return fetchAll($link, $sql);
 	}
 
 	function inc_view($product_id)

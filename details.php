@@ -38,17 +38,28 @@
             <div class="col-md-12">
                <nav class="navbar navbar-default">
                   <div class="collapse navbar-collapse js-navbar-collapse navbg ">
+
+                    <div class="search-block ">
+                        <form action="search.php">
+                           <input name="keyword" type="search" placeholder="Search">
+                        </form>
+                    </div>
+
                      <ul class="nav navbar-nav">
                         <li><a href="index.php">Home</a></li>
                         <li>
-                                 <?php
-                                     //determines whether user logged in
-                                     if (isLoggedIn()){
-                                         echo '<a href="#">' .getUserName() .'</a>';
-                                     } else {
-                                         echo '<a id="loginLink" href="login.php">Login/SignUp</a>';
-                                     }
-                                 ?>
+                              <?php
+                                  //determines whether user logged in
+                                  if (isLoggedIn()){
+                                    if (isAdmin()){
+                                      echo '<a href="admin.php">' .getUserName() .'</a>';
+                                      } else {
+                                        echo '<a href="mypage.php">' .getUserName() .'</a>';
+                                      }
+                                  } else {
+                                    echo '<a id="loginLink" href="login.php">Login/SignUp</a>';
+                                  }
+                              ?>
                         </li>
                         <li>
                                  <?php
@@ -146,86 +157,57 @@
 						<div class="widget-area">
 							<div class="status-upload">
 								<form>
-									<textarea placeholder="Your comment goes here" ></textarea>
+                  <input type="text" value=   
+                  <?php 
+                    $username = getUserName();
+                    echo "'$username'";
+                  ?> 
+                  id="username" style="visibility: hidden;"/>
+                  <input type="text" value=
+                  <?php echo "'$product_id'"; ?> id="product_id" style="visibility: hidden;"/>
+
+									<textarea id="content" placeholder="Your comment goes here" ></textarea>
 									<div class="comment-box-control">
-										<button type="submit" class="btn pull-right">Post</button>
+										<input type="button" value="Post" id="post_btn" class="btn pull-right"/>
 									</div>
 								</form>
-							</div><!-- Status Upload  -->
-						</div><!-- Widget Area -->
-						
+							</div>
+						</div>
 						
 						<div class="row comment-posts">
-							<div class="col-sm-1">
-								<div class="thumbnail">
-									<img class="img-responsive user-photo" src="img/headimg/1.png" alt="Comment User Avatar">
-								</div>
-							</div>
+              <?php
+                  $index = 0;
+                      $rows = getComments($product_id);
+                      if(!empty($rows)){
+                        foreach ($rows as $row){
+              ?>
 
-							<div class="col-sm-11">
-								<div class="panel panel-default">
-									<div class="panel-heading">
-										<strong>Kelvin</strong> <span class="pull-right">2020.8.11 11:00</span>
-									</div>
-									<div class="panel-body">
-										I'm just gonna simp for WLOP for the rest of my life.
-									</div>
-								</div>
-							</div>
-						
-							<div class="col-sm-1">
-								<div class="thumbnail">
-									<img class="img-responsive user-photo" src="img/headimg/2.png" alt="Comment User Avatar">
-								</div>
-							</div>
-
-              <div class="col-sm-11">
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <strong>Andy Lee</strong> <span class="pull-right">2020.7.4 11:00</span>
-                  </div>
-                  <div class="panel-body">
-                    Imagine a movie looking like this. It’d be something magical like Studio Ghibli with it’s landscapes.
+                <div class="col-sm-1">
+                  <div class="thumbnail">
+                    <img class="img-responsive user-photo" src=
+                      <?php echo $row['headimg_url']; ?>
+                    alt="Comment User Avatar">
                   </div>
                 </div>
-              </div>
 
+  							<div class="col-sm-11">
+  								<div class="panel panel-default">
+  									<div class="panel-heading">
+  										<strong>
+                        <?php echo $row['username']; ?>
+                      </strong> 
+                      <span class="pull-right">
+                        <?php echo $row['create_date']; ?>
+                      </span>
+  									</div>
+  									<div class="panel-body">
+  										<?php echo $row['content']; ?>
+  									</div>
+  								</div>
+  							</div>
 
-              <div class="col-sm-1">
-                <div class="thumbnail">
-                  <img class="img-responsive user-photo" src="img/headimg/3.png" alt="Comment User Avatar">
-                </div>
-              </div>
+                    <?php }} ?>
 
-              <div class="col-sm-11">
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <strong>Tony</strong> <span class="pull-right">2020.7.4 11:00</span>
-                  </div>
-                  <div class="panel-body">
-                    HOW  do her strands of hair look like ONE brush stroke yet so detailed?
-                    Never gonna reacht this level, amazing job once again!.
-                  </div>
-                </div>
-              </div>
-
-
-              <div class="col-sm-1">
-                <div class="thumbnail">
-                  <img class="img-responsive user-photo" src="img/headimg/4.png" alt="Comment User Avatar">
-                </div>
-              </div>
-
-              <div class="col-sm-11">
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <strong>Sun</strong> <span class="pull-right">2020.7.4 11:00</span>
-                  </div>
-                  <div class="panel-body">
-                    This is amazing, it is a new and bigger step to bring your drawings to live。
-                  </div>
-                </div>
-              </div>
             </div>
 					</section>
 				  
@@ -256,4 +238,34 @@
 </div>
 
    </body>
+
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+    <script>
+ 
+        $("#post_btn").click(function () {
+            var param = {
+                "act": 'comment',
+                "content": $("#content").val(),
+                "username": $("#username").val(),
+                "product_id": $("#product_id").val(),
+            };
+
+            if ($("#username").val() == ''){
+              window.location = 'login.php';
+            }
+
+            $.ajax({
+                url:"/student_entrepreneur_funding_system/doaction.php",
+                data:param,
+                type:"POST",
+                dataType:"text",
+                success:function (data) {
+                    if (data.search('Post successfully') > -1){
+                        window.document.location.reload();
+                    }
+                }
+            })
+        })
+    </script>
+
 </html>
