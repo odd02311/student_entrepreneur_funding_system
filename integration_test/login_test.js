@@ -9,8 +9,8 @@ casper.test.begin('LoginTest', 0, function (test) {
     var empty_value = '';
     var valid_username = 'test_username';
     var valid_password = 'test_password';
-    var invalid_username = '1111';
-    var invalid_password = '1111';
+    var invalid_username = 'invalid_username';
+    var invalid_password = 'invalid_username';
 
 
     casper.start(index_url).then(function () {

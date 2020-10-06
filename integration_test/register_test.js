@@ -12,7 +12,7 @@ casper.test.begin('RegisterTest', 0, function (test) {
     var valid_username = 'test_username';
     var valid_password = 'test_password';
     var invalid_password = '1111';
-    var registered_username = '1111';
+    var registered_username = 'admin';
 
     function getValidUsername() {
     　　var $chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678';

@@ -60,7 +60,7 @@ description VARCHAR(30) NOT NULL
 
 insert into accounts (username, password, is_admin, email, phone, school, headimg_url, create_date)
 values
-('test_username', 'e10adc3949ba59abbe56e057f20f883e', 0, 'test_username@gmail.com', '+65 432435443', 'National University of Singapore', 
+('test_username', '16ec1ebb01fe02ded9b7d5447d3dfc65', 0, 'test_username@gmail.com', '+65 432435443', 'National University of Singapore', 
 	'img/headimg/2.png' , STR_TO_DATE('30,5,2020','%d,%m,%Y')),
 ('admin', 'e10adc3949ba59abbe56e057f20f883e', 1, 'admin123456@gmail.com', '+65 847294575', 'James Cook University Singapore', 
 	'img/headimg/3.png' , STR_TO_DATE('7,5,2020','%d,%m,%Y')),

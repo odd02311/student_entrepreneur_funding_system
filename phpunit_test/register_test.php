@@ -24,7 +24,7 @@ class RegiterTest extends TestCase
     {
         $this->empty_username = '';
         $this->empty_password = '';
-        $this->registered_username = 'registered_username';
+        $this->registered_username = 'admin';
         $this->valid_username = $this->random_username();
         $this->valid_password = 'test_password';
         $this->valid_password2 = 'test_password2';
