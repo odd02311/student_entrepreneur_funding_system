@@ -1,9 +1,6 @@
-
-
 Backend: PHP 
 database:mysql
 frontend: html css bootstrap jQuery
-
 
 
 
