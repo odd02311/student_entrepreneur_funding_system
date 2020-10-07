@@ -1,0 +1,117 @@
+
+.video-right-banner {
+	display:inline-block;
+	margin:20px; padding:20px;
+	background:rgba(0,0,0,0.4);
+}
+.video-info ul.social {margin:5px 0;}
+
+.video-info {
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	transition: all 0.2s ease-out 0s;
+	background-color: #a9baca;
+	display:block;
+	padding: 20px 20px 20px 20px;
+	border-top: 5px solid var(--primary-color);
+}
+
+#single-video-wrapper .video-info,
+#single-video .video-info,
+#single-video-fullwidth-wrapper .video-info,
+#single-video-right-sidebar-wrapper .video-info,
+#single-video-no-sidebar-wrapper .video-info,
+
+
+.comment-box-control {
+	display:inline-block;
+	padding-top:0px;
+	padding-right:15px;
+	padding-bottom:4px;
+	width:100%;
+}
+.status-upload {
+	display:inline-block;
+	width: 100%;
+	border-radius: 8px;
+}
+
+.status-upload form textarea {
+	background: none repeat scroll 0 0 #fff;
+	border: medium none;
+	color: #777777;
+	float: left;
+	font-size: 16px;
+	height: 142px;
+	letter-spacing: 0.3px;
+	padding: 20px;
+	width: 100%;
+	resize:vertical;
+	outline:none;
+	border: 1px solid #ddd;
+}
+
+.status-upload form button {
+	border: medium none;
+	color: white;
+	font-size: 16px;
+	letter-spacing: 0.3px;
+	margin-top:5px;
+	padding: 10px 15px;
+	background: var(--primary-color);
+	text-transform:uppercase;
+	transition: all 0.1s linear 0s;
+	border-radius:8px;
+}
+
+.status-upload form button:hover {
+	background:#3962a5;
+	color:white;
+	border:none;
+}
+
+span.meta-i {
+	color: white;
+	display:inline-block;
+	font-size:16px;
+	font-weight:400;
+	margin-right:30px;
+	margin-bottom:15px;
+}
+span.meta-i i {margin-right:10px;}
+
+/* SOCIAL ICONSET */
+.social-facebook {background:#2951a7;}
+.social-twitter {background:#37b1ff;}
+.social-google-plus {background:#fc2e15;}
+.social-youtube {background:#df1e1a;}
+.social-vimeo {background:#17aee1;}
+.social-rss {background:#fd7120;}
+ul.social {margin: 30px 0;display:inline-block;padding-left:0;}
+ul.social li {
+    padding: 0 2px 0 2px;
+	width:35px;
+    border-radius:10px;
+	margin:0 2px;
+	transition: all 0.1s linear 0s;
+	display:inline-block;
+	list-style:none;
+	text-align:center;
+	opacity:1;
+}
+ul.social li:hover {opacity:0.6;}
+ul.social li a {
+	display:block;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    height: auto;
+    letter-spacing: -1px;
+    padding: 8px 6px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.1s linear 0s;
+    width: auto;
+}

@@ -43,11 +43,19 @@ class Login {
 			if(mysqli_num_rows($result) == 1) {
 				//Login Successful
 				//session_regenerate_id();
-				$member = mysqli_fetch_assoc($result);
-				$_SESSION['SESS_USERNAME'] = $member['username'];
+				$account = mysqli_fetch_assoc($result);
 
-				session_write_close();
+				$_SESSION['id'] = $account['id'];
+				$_SESSION['username'] = $account['username'];
+				$_SESSION['admin'] = $account['is_admin'];
+				$_SESSION['phone'] = $account['phone'];
+				$_SESSION['school'] = $account['school'];
+				$_SESSION['email'] = $account['email'];
+				$_SESSION['headimg'] = $account['headimg_url'];
+				$_SESSION['desc'] = $account['description'];
+
 				return "Login successfully";
+
 			}else {
 				//Login failed
 				return 'Username or password wrong';

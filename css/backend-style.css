@@ -1,0 +1,118 @@
+/*******************
+overall style
+*******************/
+
+body {
+  background: #fff;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  color: #67757c;
+  font-weight: 300; }
+
+html {
+  position: relative;
+  min-height: 100%;
+  background: white; }
+
+a.link {
+  color: #455a64; }
+  a.link:hover, a.link:focus {
+    color: #009efb; }
+
+.img-responsive {
+  width: 100%;
+  height: auto;
+  display: inline-block; }
+
+.img-rounded {
+  border-radius: 4px; }
+
+
+.img-circle {
+  border-radius: 100%; }
+
+.pro-img {
+  margin-top: -80px;
+  margin-bottom: 20px; }
+
+.pro-img img {
+  width: 128px;
+  height: 128px;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 100%; }
+
+.sl-left img {
+  max-width: 40px; }
+
+.profile-pic {
+    width: 30px;
+    border-radius: 100%; }
+
+.userinfo {
+  color: white;
+}
+
+.topbar {
+  background: #1e88e5;
+  position: relative;
+  z-index: 50;
+  -webkit-box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.5); 
+  margin-bottom: 10px;
+}
+
+
+.scroll-sidebar {
+  padding-bottom: 60px; }
+
+.sidebar-nav {
+  background: #fff;
+  padding: 15px; }
+
+.sidebar-nav ul {
+    margin: 0px;
+    padding: 0px; 
+  }
+.sidebar-nav ul li {
+  list-style: none; 
+}
+.sidebar-nav ul li a {
+  color: #607d8b;
+  padding: 8px 35px 8px 15px;
+  display: block;
+  font-size: 15px;
+  border-radius: 4px;
+  white-space: nowrap; 
+}
+
+
+@media (min-width: 1024px) {
+  .page-wrapper {
+    margin-left: 240px; }
+  .footer {
+    left: 240px; } 
+}
+
+.left-sidebar {
+  position: absolute;
+  width: 240px;
+  height: 100%;
+  top: 0px;
+  z-index: 20;
+  padding-top: 70px;
+  background: #fff;
+  -webkit-box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08); }
+
+.sidebar-nav {
+  background: #fff; 
+}
+
+.sidebar-nav > ul > li.active > a,
+.sidebar-nav > ul > li.active:hover > a {
+  color: #ffffff;
+  background: #1e88e5; }
+
+
